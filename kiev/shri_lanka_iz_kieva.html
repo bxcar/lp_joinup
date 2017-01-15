@@ -179,7 +179,7 @@
     <div class="preference simple-form">
         <div class="form-container" id="form-container">
             <form class="form-simple"
-                  action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_makintour.php"
+                  action="../sendmessage.php"
                   method="post">
                 <p>
                     Заявка на подбор тура<br>
@@ -208,7 +208,7 @@
                     предложений
                 </div>
             </div>
-            <form onsubmit="return false" class="site-form" id="main-pop-fast-form">
+            <form action="../sendmessage.php" class="site-form" id="main-pop-fast-form">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -398,7 +398,7 @@
             <div class="title title-one-line">
                 <h3>Заказать звонок</h3>
             </div>
-            <form onsubmit="return false" class="site-form" id="main-pop2-fast-form">
+            <form action="../sendmessage.php" class="site-form" id="main-pop2-fast-form">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -461,7 +461,7 @@
                 <!--<h3>&nbsp;</h3>-->
                 Подбор самых выгодных вариантов!
             </div>
-            <form onsubmit="return false" class="site-form" id="main-pop3-fast-form">
+            <form action="../sendmessage.php" class="site-form" id="main-pop3-fast-form">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -487,7 +487,7 @@
                         <div class="ico ico7"></div>
                         Телефон:</label>
                     <div class="input-place">
-                        <input name="phone" type="text" class="input" required="required"/>
+                        <input name="phone" type="tel" class="input" required>
                     </div>
                 </div>
 
@@ -525,6 +525,7 @@
                 </div>
                 <div class="item not-border button-item" data-name="all">
                     <button type="submit" class="yellow-button">Отправить</button>
+                    <!--<input type="submit" value="Отправить">-->
                 </div>
             </form>
         </div>
@@ -533,7 +534,7 @@
                 <h3>Горящий тур</h3>
                 Подбор самых выгодных вариантов!
             </div>
-            <form onsubmit="return false" class="site-form" id="main-pop4-fast-form">
+            <form action="../sendmessage.php"  class="site-form" id="main-pop4-fast-form">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -599,7 +600,7 @@
             <div class="title" style="height:auto">
                 <h3>Лучшие предложения будут у вас в один клик!</h3>
             </div>
-            <form onsubmit="return false" class="site-form" id="main-pop5-fast-form">
+            <form action="../sendmessage.php" class="site-form" id="main-pop5-fast-form">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>

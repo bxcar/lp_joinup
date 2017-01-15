@@ -2115,7 +2115,7 @@ var frm = {
     init: function () {
         siteDocReady.init();
         var f = $('#popup form');
-        $('*[required]', f).removeAttr('required').attr('data-required', 'required').on('focus change', function () {
+        /*$('*[required]', f).removeAttr('required').attr('data-required', 'required').on('focus change', function () {
             $(this).removeClass('error');
             $(this).closest('.item').removeClass('item-error');
             $(this).data('isClickReady', true);
@@ -2145,7 +2145,7 @@ var frm = {
                 setCookie('popup-cjpopup', 'hide', 30);
             }, 'script');
             return false;
-        });
+        });*/
         this.hideInit(f);
     },
     hideInit: function (f) {

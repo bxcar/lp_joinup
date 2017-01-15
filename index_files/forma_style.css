@@ -1235,23 +1235,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2e063', end
 #popup.thanks-form .close:hover {opacity:1}
 
 .popup-form {width:580px}
-.popup-form .title {background:#24b090 url(popupbg.png?1391612940) 0 0 no-repeat;color:#fff;text-shadow: 0 1px 0 #24b090;font-size:18px;font-weight:300;padding:20px;height:21px;-webkit-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0;}
+.popup-form .title {background:#00a3d3 url(popupbg.png?1391612940) 0 0 no-repeat;color:#fff;text-shadow: 0 1px 0 #00a3d3;font-size:18px;font-weight:300;padding:20px;height:21px;-webkit-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0;}
 .popup-form .title h3 {font-weight:300}
 .title-one-line {line-height:51px}
 .cst-popup-form-title {height: 51px !important;}
 
 #main-form {width:900px}
 .popup-form .site-form {padding-bottom:10px}
-.popup-form .site-form .item .ico {width:30px;height:30px;background:url(sprites.png) 0 -133px no-repeat;position:absolute;left:-40px;top:5px}
+.popup-form .site-form .item .ico {width:31px;height:32px;background:url(sprites.png) 0 -133px no-repeat;position:absolute;left:-40px;top:5px}
 .popup-form .site-form .item .ico2 {background-position:-30px -133px}
 .popup-form .site-form .item .ico3 {background-position:-60px -133px}
 .popup-form .site-form .item .ico4 {background-position:-90px -133px}
 .popup-form .site-form .item .ico5 {background-position:-120px -133px}
 .popup-form .site-form .item .ico6 {background: url(../img/cust/form/user.png) no-repeat !important;}
-.popup-form .site-form .item .ico7 {background-position:-180px -133px}
-.popup-form .site-form .item .ico8 {background-position:-210px -133px}
-.popup-form .site-form .item .ico9 {background-position:-240px -133px}
-.popup-form .site-form .item .ico10 {background-position:-270px -133px}
+.popup-form .site-form .item .ico7 {background: url(../img/cust/form/tel.png) no-repeat !important; background-size: 95% !important;}
+.popup-form .site-form .item .ico8 {background: url(../img/cust/form/msg.png) no-repeat !important;}
+.popup-form .site-form .item .ico9 {background: url(../img/cust/form/dol.png) no-repeat !important; background-size: 95% !important;}
+.popup-form .site-form .item .ico10 {background: url(../img/cust/form/comment.png) no-repeat !important;}
 
 .popup-form .site-form .item {padding:9px 102px 9px 130px;border-top:1px solid #d8dff3}
 .popup-form .site-form .item:first-child {border:0}
