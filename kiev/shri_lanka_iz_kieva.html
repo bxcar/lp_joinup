@@ -186,8 +186,8 @@
                     <span>Гарантия лучшей цены</span>
                 </p>
                 <div>
-                    <input type="text" id="name" name="name" placeholder="  Имя">
-                    <input type="tel" id="tel" name="tel" placeholder="  Телефон">
+                    <input type="text" id="name" name="name" placeholder="  Имя" required>
+                    <input type="tel" id="tel" name="phone" placeholder="  Телефон" required>
                     <input type="email" id="email" name="email" placeholder="  Email">
                     <input type="submit" value="Отправить">
                 </div>
@@ -461,7 +461,7 @@
                 <!--<h3>&nbsp;</h3>-->
                 Подбор самых выгодных вариантов!
             </div>
-            <form action="../sendmessage.php" class="site-form" id="main-pop3-fast-form">
+            <form action="../sendmessage.php" class="site-form" id="main-pop3-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -479,7 +479,7 @@
                         <div class="ico ico6"></div>
                         Ваше имя:</label>
                     <div class="input-place">
-                        <input name="name" type="text" class="input"/>
+                        <input name="name" type="text" class="input" required>
                     </div>
                 </div>
                 <div class="item" data-name="all">
@@ -508,7 +508,6 @@
                         Бюджет:</label>
                     <div class="input-place">
                         <input name="budget" type="text" class="input"/>
-
                     </div>
                 </div>
 
@@ -600,7 +599,7 @@
             <div class="title" style="height:auto">
                 <h3>Лучшие предложения будут у вас в один клик!</h3>
             </div>
-            <form action="../sendmessage.php" class="site-form" id="main-pop5-fast-form">
+            <form action="../sendmessage.php" class="site-form" id="main-pop5-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
