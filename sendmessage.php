@@ -54,12 +54,13 @@ if(!empty($phone) && isset($phone)) {
     if(!empty($id_pages) && isset($id_pages)) {
         $msg .= "<p><strong>id_pages:</strong> " . $id_pages . "</p>\r\n";
     }*/
-    
+
     if(!empty($country) && isset($country)) {
         $msg .= "<p><strong>Страна:</strong> " . $country . "</p>\r\n";
     }
 
     if(!empty($city) && isset($city)) {
+        $city = str_replace('0,','',$city);
         $msg .= "<p><strong>Город вылета:</strong> " . $city . "</p>\r\n";
     }
 
@@ -68,7 +69,7 @@ if(!empty($phone) && isset($phone)) {
     }
 
     if(!empty($departure) && isset($departure)) {
-        $msg .= "<p><strong>Направление:</strong> " . $departure . "</p>\r\n";
+        $msg .= "<p><strong>Страна:</strong> " . $departure . "</p>\r\n";
     }
 
     if(!empty($date) && isset($date)) {
@@ -92,7 +93,36 @@ if(!empty($phone) && isset($phone)) {
     }
 
     $msg .= "</body></html>";
-    
+
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_URL =>
+                'http://api.u-on.ru/du4A1ZlNnyLIr90Af17E/lead/create.json',
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS =>
+                'source='.urlencode('ОНЛАЙН: Лендінг "Coral Троєщина"').
+                '&u_name='.urlencode($name).
+                '&u_phone='.urlencode($phone).
+                '&note='.'Email: '.urlencode($email)."\n".
+                'Бюджет: '.urlencode($budget)."\n".
+                'Комментарий:'.urlencode($comment)."\n".
+                'Страна(1): '.urlencode($country)."\n".
+                'Город вылета: '.urlencode($city)."\n".
+                'Страна(2): '.urlencode($departure)."\n".
+                'Дата вылета: '.urlencode($date)."\n".
+                'Количество ночей: '.urlencode($nights)."\n".
+                'Количество взрослых: '.urlencode($adt)."\n".
+                'Количество детей: '.urlencode($cnn)."\n".
+                'Тип формы: '.urlencode($form_type)
+
+        ));
+        $resp = curl_exec($curl);
+        curl_close($curl);
+    }
+    /*."  ".urlencode($p)*/
 
 // отправка сообщения
     if(mail($sendto, $subject, $msg, $headers)) {
