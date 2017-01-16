@@ -1357,9 +1357,9 @@ hr {border:0;background:#ccc;display:block;height:1px;overflow:hidden;margin:10p
 .return-form .hidden-inputs {display:none}
 
 
-.popup-form-step-6 .title {background:#f0aa9c url(popupbg2.jpg?1431979192) right top no-repeat}
+.popup-form-step-6 .title {background:#00a3d3 url(popupbg2.jpg?1431979192) right top no-repeat}
 .popup-form .step-6-title {display:none}
-.popup-form-step-6 .step-6-title {display:block;color:#000;text-shadow:none;font-size:16px;line-height:20px;padding-top:5px}
+.popup-form-step-6 .step-6-title {display:block;color:#fff;text-shadow:none;font-size:16px;line-height:20px;padding-top:5px}
 .popup-form-step-6 .main-title {display:none}
 
 .tags-list {text-align:center}

@@ -94,12 +94,69 @@
                                         <div class="item select-item">
                                             <label class="label">Страна</label>
                                             <select name="departure">
-                                                <option value="3">Турция</option>
-                                                <option value="1">Египет</option>
-                                                <option value="2">Таиланд</option>
-                                                <option value="4">Испания</option>
-                                                <option value="5">Мальдивы</option>
-                                                <option value="6">Танзания</option>
+                                                <option selected value="Египет">Египет</option>
+                                                <option value="Австрия">Австрия</option>
+                                                <option value="Беларусь">Беларусь</option>
+                                                <option value="Бельгия">Бельгия</option>
+                                                <option value="Болгария">Болгария</option>
+                                                <option value="Венгрия">Венгрия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Голландия">Голландия</option>
+                                                <option value="Греция">Греция</option>
+                                                <option value="Грузия">Грузия</option>
+                                                <option value="Дания">Дания</option>
+                                                <option value="Испания">Испания</option>
+                                                <option value="Италия">Италия</option>
+                                                <option value="Кипр">Кипр</option>
+                                                <option value="Латвия">Латвия</option>
+                                                <option value="Литва">Литва</option>
+                                                <option value="Нидерланды">Нидерланды</option>
+                                                <option value="Норвегия">Норвегия</option>
+                                                <option value="Польша">Польша</option>
+                                                <option value="Португалия">Португалия</option>
+                                                <option value="Румыния">Румыния</option>
+                                                <option value="Словакия">Словакия</option>
+                                                <option value="Словения">Словения</option>
+                                                <option value="Украина">Украина</option>
+                                                <option value="Финляндия">Финляндия</option>
+                                                <option value="Франция">Франция</option>
+                                                <option value="Хорватия">Хорватия</option>
+                                                <option value="Черногория">Черногория</option>
+                                                <option value="Чехия">Чехия</option>
+                                                <option value="Швейцария">Швейцария</option>
+                                                <option value="Швеция">Швеция</option>
+                                                <option value="Эстония">Эстония</option>
+                                                <option value="Бали">Бали</option>
+                                                <option value="Вьетнам">Вьетнам</option>
+                                                <option value="Израиль">Израиль</option>
+                                                <option value="Индия">Индия</option>
+                                                <option value="Индонезия">Индонезия</option>
+                                                <option value="Иордания">Иордания</option>
+                                                <option value="Китай">Китай</option>
+                                                <option value="Малайзия">Малайзия</option>
+                                                <option value="Мальдивы">Мальдивы</option>
+                                                <option value="Сингапур">Сингапур</option>
+                                                <option value="Тайланд">Тайланд</option>
+                                                <option value="Турция">Турция</option>
+                                                <option value="Фиджи">Фиджи</option>
+                                                <option value="Филиппины">Филиппины</option>
+                                                <option value="Шри-Ланка">Шри-Ланка</option>
+                                                <option value="Южная Корея">Южная Корея</option>
+                                                <option value="Кения">Кения</option>
+                                                <option value="Маврикий">Маврикий</option>
+                                                <option value="ОАЭ">ОАЭ</option>
+                                                <option value="Сейшелы">Сейшелы</option>
+                                                <option value="Тунис">Тунис</option>
+                                                <option value="Мексика">Мексика</option>
+                                                <option value="США">США</option>
+                                                <option value="Аргентина">Аргентина</option>
+                                                <option value="Багамы">Багамы</option>
+                                                <option value="Барбадос">Барбадос</option>
+                                                <option value="Бразилия">Бразилия</option>
+                                                <option value="Доминикана">Доминикана</option>
+                                                <option value="Куба">Куба</option>
+                                                <option value="Перу">Перу</option>
+
                                             </select>
                                         </div>
                                         <div class="item date-item">
@@ -208,7 +265,7 @@
                     предложений
                 </div>
             </div>
-            <form action="../sendmessage.php" class="site-form" id="main-pop-fast-form">
+            <form action="../sendmessage.php" class="site-form" id="main-pop-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -231,14 +288,14 @@
                             <div class="ico ico1"></div>
                             Город вылета</label>
                         <div class="input-place">
-                            <select name="departure" data-placeholder="Выберите"
+                            <select name="city" data-placeholder="Выберите"
                                     onchange="mainStepForm.goToStep(2)">
-                                <option value="3">Киев</option>
-                                <option value="1">Днепропетровск</option>
-                                <option value="2">Запорожье</option>
-                                <option value="4">Львов</option>
-                                <option value="5">Одесса</option>
-                                <option value="6">Харьков</option>
+                                <option value="Киев">Киев</option>
+                                <option value="Днепропетровск">Днепропетровск</option>
+                                <option value="Запорожье">Запорожье</option>
+                                <option value="Львов">Львов</option>
+                                <option value="Одесса">Одесса</option>
+                                <option value="Харьков">Харьков</option>
                             </select>
                         </div>
                     </div>
@@ -255,23 +312,68 @@
                             Куда летим?</label>
                         <div class="input-place">
                             <select name="country" onchange="siteForms.getResorts(this)">
-                                <option value="3">Болгария</option>
-                                <option value="5">Греция</option>
-                                <option value="17">Грузия</option>
-                                <option value="16">Доминикана</option>
-                                <option value="4">Египет</option>
-                                <option value="15">Индия</option>
-                                <option value="6">Испания</option>
-                                <option value="1">Италия</option>
-                                <option value="7">Кипр</option>
-                                <option value="14">Мальдивы</option>
-                                <option value="11">ОАЭ</option>
-                                <option value="13">Тайланд</option>
-                                <option value="8">Тунис</option>
-                                <option value="2">Турция</option>
-                                <option value="9">Хорватия</option>
-                                <option value="10">Черногория</option>
-                                <option selected value="12">Шри Ланка</option>
+                                <option selected value="Египет">Египет</option>
+                                <option value="Австрия">Австрия</option>
+                                <option value="Беларусь">Беларусь</option>
+                                <option value="Бельгия">Бельгия</option>
+                                <option value="Болгария">Болгария</option>
+                                <option value="Венгрия">Венгрия</option>
+                                <option value="Германия">Германия</option>
+                                <option value="Голландия">Голландия</option>
+                                <option value="Греция">Греция</option>
+                                <option value="Грузия">Грузия</option>
+                                <option value="Дания">Дания</option>
+                                <option value="Испания">Испания</option>
+                                <option value="Италия">Италия</option>
+                                <option value="Кипр">Кипр</option>
+                                <option value="Латвия">Латвия</option>
+                                <option value="Литва">Литва</option>
+                                <option value="Нидерланды">Нидерланды</option>
+                                <option value="Норвегия">Норвегия</option>
+                                <option value="Польша">Польша</option>
+                                <option value="Португалия">Португалия</option>
+                                <option value="Румыния">Румыния</option>
+                                <option value="Словакия">Словакия</option>
+                                <option value="Словения">Словения</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Финляндия">Финляндия</option>
+                                <option value="Франция">Франция</option>
+                                <option value="Хорватия">Хорватия</option>
+                                <option value="Черногория">Черногория</option>
+                                <option value="Чехия">Чехия</option>
+                                <option value="Швейцария">Швейцария</option>
+                                <option value="Швеция">Швеция</option>
+                                <option value="Эстония">Эстония</option>
+                                <option value="Бали">Бали</option>
+                                <option value="Вьетнам">Вьетнам</option>
+                                <option value="Израиль">Израиль</option>
+                                <option value="Индия">Индия</option>
+                                <option value="Индонезия">Индонезия</option>
+                                <option value="Иордания">Иордания</option>
+                                <option value="Китай">Китай</option>
+                                <option value="Малайзия">Малайзия</option>
+                                <option value="Мальдивы">Мальдивы</option>
+                                <option value="Сингапур">Сингапур</option>
+                                <option value="Тайланд">Тайланд</option>
+                                <option value="Турция">Турция</option>
+                                <option value="Фиджи">Фиджи</option>
+                                <option value="Филиппины">Филиппины</option>
+                                <option value="Шри-Ланка">Шри-Ланка</option>
+                                <option value="Южная Корея">Южная Корея</option>
+                                <option value="Кения">Кения</option>
+                                <option value="Маврикий">Маврикий</option>
+                                <option value="ОАЭ">ОАЭ</option>
+                                <option value="Сейшелы">Сейшелы</option>
+                                <option value="Тунис">Тунис</option>
+                                <option value="Мексика">Мексика</option>
+                                <option value="США">США</option>
+                                <option value="Аргентина">Аргентина</option>
+                                <option value="Багамы">Багамы</option>
+                                <option value="Барбадос">Барбадос</option>
+                                <option value="Бразилия">Бразилия</option>
+                                <option value="Доминикана">Доминикана</option>
+                                <option value="Куба">Куба</option>
+                                <option value="Перу">Перу</option>
                             </select>
                         </div>
                     </div>
@@ -355,7 +457,7 @@
                             <div class="ico ico7"></div>
                             Телефон:</label>
                         <div class="input-place">
-                            <input name="phone" type="text" class="input" required="required"/>
+                            <input name="phone" type="text" class="input" required>
                         </div>
                     </div>
                     <div class="item" data-name="all">
@@ -405,7 +507,7 @@
                 <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
                 <input type="hidden" name="phone_type" value="phone"/>
                 <input type="hidden" name="form_type" value="phone"/>
-                <input type="hidden" name="country" value="12"/>
+                <input type="hidden" name="country" value=""/>
 
                 <div class="item" data-name="all">
                     <label class="label">
@@ -473,7 +575,7 @@
                 <input type="hidden" name="adt"/>
                 <input type="hidden" name="cnn"/>
                 <input type="hidden" name="form_type" value="fast"/>
-                <input type="hidden" name="country" value="12"/>
+                <input type="hidden" name="country" value=""/>
                 <div class="item" data-name="all">
                     <label class="label">
                         <div class="ico ico6"></div>
@@ -540,7 +642,7 @@
                 <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
                 <input type="hidden" name="hot_id" value="0"/>
                 <input type="hidden" name="form_type" value="hot"/>
-                <input type="hidden" name="country" value="12"/>
+                <input type="hidden" name="country" value=""/>
                 <div class="item">
                     <label class="label">
                         <div class="ico ico1"></div>
@@ -604,7 +706,7 @@
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
                 <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
-                <input type="hidden" name="country" value="12"/>
+                <input type="hidden" name="country" value=""/>
                 <input type="hidden" name="form_type" value="return"/>
                 <div class="hidden-inputs"></div>
                 <div class="inner-title">Вы выбрали</div>

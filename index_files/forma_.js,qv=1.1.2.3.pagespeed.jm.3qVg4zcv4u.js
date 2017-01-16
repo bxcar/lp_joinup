@@ -2077,7 +2077,12 @@ var popup = {
         var data = $('form', p).serializeObject();
 
 
-        var city_name = $('select[name="departure"]:first option[value="' + data.departure + '"]').text();
+        if(!data.country) {
+            var city_name = $('select[name="departure"]:first option[value="' + data.departure + '"]').text();
+        }
+        else {
+            var city_name = $('select[name="departure"]:first option[value="' + data.country + '"]').text();
+        }
         var country_id = GLOBAL_country_id;
         if (data.country) country_id = data.country;
         var country_name = $('select[name="country"]:first option[value="' + country_id + '"]').text();

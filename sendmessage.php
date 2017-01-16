@@ -19,10 +19,6 @@ $cnn = trim($_POST['cnn']);
 $form_type = trim($_POST['form_type']);
 $country = trim($_POST['country']);
 
-if($departure == '1') {
-    $departure = 'Египет';
-}
-
 if(!empty($phone) && isset($phone)) {
 
 // Формирование заголовка письма
@@ -58,9 +54,13 @@ if(!empty($phone) && isset($phone)) {
     if(!empty($id_pages) && isset($id_pages)) {
         $msg .= "<p><strong>id_pages:</strong> " . $id_pages . "</p>\r\n";
     }*/
+    
+    if(!empty($country) && isset($country)) {
+        $msg .= "<p><strong>Страна:</strong> " . $country . "</p>\r\n";
+    }
 
     if(!empty($city) && isset($city)) {
-        $msg .= "<p><strong>Город:</strong> " . $city . "</p>\r\n";
+        $msg .= "<p><strong>Город вылета:</strong> " . $city . "</p>\r\n";
     }
 
     if(!empty($city_yandex) && isset($city_yandex)) {
@@ -90,10 +90,6 @@ if(!empty($phone) && isset($phone)) {
     if(!empty($form_type) && isset($form_type)) {
         $msg .= "<p><strong>Тип формы:</strong> " . $form_type . "</p>\r\n";
     }
-
-    /*if(!empty($country) && isset($country)) {
-        $msg .= "<p><strong>Страна:</strong> " . $country . "</p>\r\n";
-    }*/
 
     $msg .= "</body></html>";
     
