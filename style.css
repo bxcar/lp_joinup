@@ -12419,6 +12419,7 @@ body.modal-open {
 
 .simple-form {
     background: url(img/cust/back2.png) !important;
+    background-size: cover !important;
 }
 
 

@@ -35,6 +35,24 @@
         }
     })(window, document)</script>
 
+    <script src="../jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".phone-2").on("click", "a", function (event) {
+                //отменяем стандартную обработку нажатия по ссылке
+                event.preventDefault();
+
+                //забираем идентификатор бока с атрибута href
+                var id = $(this).attr('href'),
+
+                //узнаем высоту от начала страницы до блока на который ссылается якорь
+                        top = $(id).offset().top;
+
+                //анимируем переход на расстояние - top за 700 мс
+                $('body,html').animate({scrollTop: top}, 700);
+            });
+        });
+    </script>
 
 </head>
 <body>
@@ -51,8 +69,13 @@
                 <li class="phone-22"></li>
                 <li class="phone-22"></li>
                 <li class="phone-2">
-                    <a class="btn-default-ico question popup_show"
-                       href="javascript:;"><span style="font-size: 18px; line-height: 20px; text-transform: none;">Подберите <br/>мне тур</span></a>
+                    <!--<a class="btn-default-ico question popup_show"
+                       href="javascript:;"><span style="font-size: 18px; line-height: 20px; text-transform: none;">Подберите <br/>мне тур</span></a>-->
+                    <a href="#simple-form" class="btn-default-ico question">
+                        <span style="font-size: 18px; line-height: 20px; text-transform: none;">
+                            Подберите <br/>мне тур
+                        </span>
+                    </a>
                 </li>
                 <li class="question"><a href="tel:0 800 800 025">0 800 800 025</a><br>
                     <span class="bottom-tel-text">ЗВОНКИ БЕСПЛАТНЫЕ</span>
@@ -77,8 +100,11 @@
                         <p class="text-content">Ежедневно у нас появляются сотни Горящих предложений путевок.
                             Цены на такие предложения значительно ниже обычных.
                             Мы поможем подобрать тур специально для Вас.</p>
-                        <div class="hide-xs "><a onclick="popup.show('#main-form');" class="btn-default-ico select-tur" style="margin-top: 15px;"
-                                                 ><span>Подобрать тур</span></a></div>
+                        <div class="hide-xs phone-2">
+                            <a href="#simple-form" class="btn-default-ico select-tur" style="margin-top: 15px;">
+                                <span>Подобрать тур</span>
+                            </a>
+                        </div> <!--onclick="popup.show('#main-form');"-->
                     </li>
                 </ul>
             </div>
@@ -233,7 +259,7 @@
         </div>
     </div>
 
-    <div class="preference simple-form">
+    <div class="preference simple-form" id="simple-form">
         <div class="form-container" id="form-container">
             <form class="form-simple"
                   action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
@@ -265,7 +291,8 @@
                     предложений
                 </div>
             </div>
-            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php" class="site-form" id="main-pop-fast-form" method="post">
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -500,7 +527,8 @@
             <div class="title title-one-line">
                 <h3>Заказать звонок</h3>
             </div>
-            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php" class="site-form" id="main-pop2-fast-form">
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop2-fast-form">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -563,7 +591,8 @@
                 <!--<h3>&nbsp;</h3>-->
                 Подбор самых выгодных вариантов!
             </div>
-            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php" class="site-form" id="main-pop3-fast-form" method="post">
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop3-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -635,7 +664,8 @@
                 <h3>Горящий тур</h3>
                 Подбор самых выгодных вариантов!
             </div>
-            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"  class="site-form" id="main-pop4-fast-form">
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop4-fast-form">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -701,7 +731,8 @@
             <div class="title" style="height:auto">
                 <h3>Лучшие предложения будут у вас в один клик!</h3>
             </div>
-            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php" class="site-form" id="main-pop5-fast-form" method="post">
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop5-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
                 <input name="city" id="city" type="hidden" value="0"/>
@@ -741,7 +772,8 @@
                 </div>
             </form>
         </div>
-        <div id="main-form-thanks" data-class-name="thanks-form"><h3 class="cst-h3">Быстрый подбор тура</h3>Спасибо! Ваша заявка
+        <div id="main-form-thanks" data-class-name="thanks-form"><h3 class="cst-h3">Быстрый подбор тура</h3>Спасибо!
+            Ваша заявка
             отправлена. В ближайшее время с Вами свяжется наш менеджер.
         </div>
         <div id="phone-form-thanks" data-class-name="thanks-form"><h3>Заказать звонок</h3>Спасибо! Ваша заявка
@@ -762,23 +794,23 @@
     <div class="footer_inner">
         <p>Присоединяйтесь к нам</p>
         <div class="copy_line cf">
-                <!--<li><a href="/about_us" >О нас</a></li>-->
-                <a class="social-images" href="https://www.facebook.com/my.makintour" target="_blank">
-                    <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/fb.png">
-                </a>
-                <a class="social-images" href="https://vk.com/makintour" target="_blank">
-                    <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/vk.png">
-                </a>
-                <a class="social-images" href="https://ok.ru/makintour" target="_blank">
-                    <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/ok.png">
-                </a>
-                <a class="social-images" href="https://www.instagram.com/makintour/" target="_blank">
-                    <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/inst.png">
-                </a>
-                <a class="social-images" href="https://plus.google.com/117054385108175084294?hl=ru"
-                                  target="_blank">
-                    <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/gg.png">
-                </a>
+            <!--<li><a href="/about_us" >О нас</a></li>-->
+            <a class="social-images" href="https://www.facebook.com/my.makintour" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/fb.png">
+            </a>
+            <a class="social-images" href="https://vk.com/makintour" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/vk.png">
+            </a>
+            <a class="social-images" href="https://ok.ru/makintour" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/ok.png">
+            </a>
+            <a class="social-images" href="https://www.instagram.com/makintour/" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/inst.png">
+            </a>
+            <a class="social-images" href="https://plus.google.com/117054385108175084294?hl=ru"
+               target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/gg.png">
+            </a>
         </div>
         <p class="copyright"><span>Copyright © MAKINTOUR Все права защищены</span></p>
     </div>
