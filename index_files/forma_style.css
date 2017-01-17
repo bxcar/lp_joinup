@@ -1253,7 +1253,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2e063', end
 .popup-form .site-form .item .ico9 {background: url(../img/cust/form/dol.png) no-repeat !important; background-size: 95% !important;}
 .popup-form .site-form .item .ico10 {background: url(../img/cust/form/comment.png) no-repeat !important;}
 
-.popup-form .site-form .item {padding:9px 102px 9px 130px;border-top:1px solid #d8dff3}
+.popup-form .site-form .item {padding:5px 102px 5px 130px;border-top:1px solid #d8dff3}
 .popup-form .site-form .item:first-child {border:0}
 .popup-form .site-form .not-border {border:0}
 .popup-form .site-form .item label.label {display:block;float:left;width:153px;position:relative;height:40px;line-height:40px}
@@ -1322,7 +1322,7 @@ hr {border:0;background:#ccc;display:block;height:1px;overflow:hidden;margin:10p
 
 .steps-form .steps {list-style-type:none;padding:10px 20px}
 .steps-form .steps li {width:133px;height:40px;vertical-align:middle;display:table-cell;text-align:center;background:#f0f0f0;color:#bbb;padding:5px}
-.steps-form .steps li.active {background:#fd8525 !important;color:#fff}
+.steps-form .steps li.active {background:#dd127b !important;color:#fff}
 .steps-form .steps li.selected {background:#ff5a35;cursor:pointer;color:#fff;font-size:14px}
 .steps-form .steps li.checked {background:#a1bc31;color:#fff}
 .steps-form .input-place {width:666px }
