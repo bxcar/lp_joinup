@@ -10589,7 +10589,8 @@ li.question:after {
 }
 
 #page > .header .menu li.question {
-    float: right;
+    /*float: right;*/
+    margin-left: 20px;
     padding-left: 30px;
     margin-top: 10px;
     margin-right: 20px;
@@ -11956,6 +11957,9 @@ body.modal-open {
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1169px) {
+    li.phone-22 {
+        min-width: 50px;
+    }
 
 }
 
@@ -11967,6 +11971,14 @@ body.modal-open {
 
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+
+    .btn-default-ico.question {
+        display: none;
+    }
+    li.phone-22 {
+        min-width: 50px;
+    }
+
 
     .footer_wrap {
         min-width: 100% !important;
@@ -12085,6 +12097,19 @@ body.modal-open {
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
+
+    .btn-default-ico.question {
+        display: none;
+    }
+
+    #page > .header .menu li.question {
+        float: right;
+    }
+
+    li.phone-22 {
+        min-width: 0;
+    }
+
     .f > li {
         width: 100%;
         display: inline-block;
@@ -12195,7 +12220,7 @@ body.modal-open {
     }
 
     #page > .header .menu li.logo {
-        display: none;
+        /*display: none;*/
     }
 
     #page .slider-top .text ul li h1 {
@@ -12219,7 +12244,7 @@ body.modal-open {
     }
 
     li.phone-22 {
-        display: none;
+        display: none !important;
     }
 
     #page .slider-top .buttons, .contact .buttons {
@@ -12315,6 +12340,12 @@ body.modal-open {
         width: 400px !important;
     }
 
+}
+
+@media only screen and (max-width: 525px) {
+    #page > .header .menu li.logo a, #page > .header .menu li.logo div {
+        display: none;
+    }
 }
 
 /*body,#page,#page > .header{min-width: 410px;}*/
