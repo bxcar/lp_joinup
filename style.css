@@ -2061,6 +2061,18 @@ th {
   src: url('js/fonts/glyphicons-halflings-regular.eot');
   src: url('js/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('js/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('js/fonts/glyphicons-halflings-regular.woff') format('woff'), url('js/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('js/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }*/
+
+#page .slider-top .text ul li .header-2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+}
+
+#page .slider-top .text ul li .header-2 span {
+    font-size: 40px;
+}
+
 .glyphicon {
     position: relative;
     top: 1px;
@@ -3711,12 +3723,14 @@ pre code {
     .container {
         width: 970px;
     }
+
 }
 
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
+
 }
 
 .container-fluid {
@@ -6809,6 +6823,26 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     .navbar > .container .navbar-brand,
     .navbar > .container-fluid .navbar-brand {
         margin-left: -15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #page .slider-top .text ul li .header-2 {
+        font-size: 100% !important;
+    }
+
+    #page .slider-top .text ul li .header-2 span {
+        font-size: 160% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    #page .slider-top .text ul li .header-2 {
+        font-size: 100% !important;
+    }
+
+    #page .slider-top .text ul li .header-2 span {
+        font-size: 160% !important;
     }
 }
 
@@ -9908,7 +9942,8 @@ body {
     height: 46px;
     top: 12px;
     left: 0;
-    background: url(img/spr-001.png) -40px -55px no-repeat;
+    background: url(img/cust/tap_finger.png) no-repeat;
+    background-size: 70%;
 }
 
 /******************************************************************************/
@@ -10474,7 +10509,7 @@ body {
     right: 0;
     height: 63px;
     /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAABCCAYAAAAlkZRRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTE3Q0QzMTVBMzlEMTFFNDhGNDFEQjgwNUMwOEY3MEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTE3Q0QzMTZBMzlEMTFFNDhGNDFEQjgwNUMwOEY3MEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MTdDRDMxM0EzOUQxMUU0OEY0MURCODA1QzA4RjcwQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MTdDRDMxNEEzOUQxMUU0OEY0MURCODA1QzA4RjcwQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuPO/isAAABYSURBVHja7NrBCQAgEANBFftvz248tYsIE9j/FJBeVasFb95GMjAaBwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAj4J/D9B3cy8AgwAAPhBVxYhYdCAAAAAElFTkSuQmCC) 0 0 repeat-x;*/
-    background-color: #cdcfd0;
+    background-color: rgba(205, 207, 208, 0.7);
 }
 
 #page > .header > .inner {
@@ -12344,7 +12379,36 @@ body.modal-open {
 
 @media only screen and (max-width: 525px) {
     #page > .header .menu li.logo a, #page > .header .menu li.logo div {
-        display: none;
+        /*display: none;*/
+        /*width: 50%;*/
+        width: 150px;
+        background: #dd127b no-repeat;
+        background-size: 100%;
+        background-position-y: 40%;
+    }
+
+    #page > .header .menu {
+        padding-left: 0;
+    }
+
+    #page > .header .menu li.logo div {
+        height: 63px;
+    }
+
+    #page > .header .menu li.question {
+        margin-left: 0;
+    }
+
+    li.phone-2 {
+        display: none !important;
+    }
+
+    #page .slider-top .text ul li .header-2 {
+        font-size: 100% !important;
+    }
+
+    #page .slider-top .text ul li .header-2 span {
+        font-size: 130% !important;
     }
 }
 
@@ -12406,16 +12470,6 @@ body.modal-open {
     height: 130px !important;
 }
 
-#page .slider-top .text ul li .header-2 {
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 auto 15px auto;
-}
-
-#page .slider-top .text ul li .header-2 span {
-    font-size: 40px;
-}
 
 .simple-form {
     background: url(img/cust/back2.png) !important;
@@ -12527,6 +12581,10 @@ input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-ind
         height: 33px;
         width: 200px;
         margin-top: 15px;
+    }
+
+    input[type="submit"] {
+        height: 37px;
     }
     .main-header-container {
         padding-top: 10%;
