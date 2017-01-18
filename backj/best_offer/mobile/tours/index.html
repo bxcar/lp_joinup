@@ -47,28 +47,6 @@
         margin-top: 19px;
     }
 </style>
-    <script src="../../mask/src/jquery.maskedinput.js"></script>
-    <script type="text/javascript">
-        $( document ).ready(function() {
-
-            $.mask.definitions['~'] = '[+-]';
-
-
-            $('#tel_phone').mask('(999) 999-9999');
-
-
-            $("#tin").mask("99-9999999");
-
-            $("#ssn").mask("999-99-9999");
-
-            $("#product").mask("a*-999-a999");
-
-            $("#eyescript").mask("~9.99 ~9.99 999");
-
-
-            tel
-        });</script>
-
 </head>
 <body>
 <div id="page" class="mobil">
@@ -364,7 +342,7 @@
                 <div class="controls">
                     <!--<label class="control-label">Введите ваш номер телефона</label><br/>-->
                     <h4 class="shipping-address">Введите ваш номер телефона</h4>
-                    <input id="tel_phone" name="phone" type="text" class="input" pattern="[0-9]{10}" placeholder="0991234567" required="required">
+                    <input name="phone" type="text" class="input" placeholder="телефон" required="required">
                 </div>
                 <input type="hidden" name="show" value="mobil">
                 <input type="hidden" name="name" value="">

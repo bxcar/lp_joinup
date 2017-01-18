@@ -212,10 +212,10 @@
     </div>
 
     <div class="top">
-        <div class="slider-top">
+        <div class="slider-top" style="background: #000">
             <div class="background">
                 <ul>
-                    <li style="background-image:url(../img/cust/back1.jpg)"
+                    <li style="background:url(../img/cust/back1.jpg); opacity: 0.5; background-size: cover;"
                         data-parallax="background"></li>
                 </ul>
             </div>
@@ -893,7 +893,7 @@
                         <div class="ico ico7"></div>
                         Телефон:</label>
                     <div class="input-place">
-                        <input name="phone" type="text" class="input" required="required"/>
+                        <input pattern="[0-9]{10}" placeholder="0991234567" name="phone" type="text" class="input" required="required"/>
                     </div>
                 </div>
                 <div class="item not-border button-item" data-name="all">

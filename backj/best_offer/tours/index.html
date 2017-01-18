@@ -56,10 +56,9 @@
 
     <script src="../mask/src/jquery.maskedinput.js"></script>
     <script type="text/javascript">
+        jQuery(function ($) {
 
-        jQuery(function($) {
-
-            $.mask.definitions['~']='[+-]';
+            $.mask.definitions['~'] = '[+-]';
 
             $('#date').mask('99/99/9999');
 
@@ -75,15 +74,45 @@
 
             $("#eyescript").mask("~9.99 ~9.99 999");
 
+
+            $.fn.setCursorPosition = function (pos) {
+                this.each(function (index, elem) {
+                    if (elem.setSelectionRange) {
+                        elem.setSelectionRange(pos, pos);
+                    } else if (elem.createTextRange) {
+                        var range = elem.createTextRange();
+                        range.collapse(true);
+                        range.moveEnd('character', pos);
+                        range.moveStart('character', pos);
+                        range.select();
+                    }
+                });
+                return this;
+            };
+            $("#tel").click(function () {
+                var input = $("#tel");
+                input.setCursorPosition(1);
+            });
+
+
+
+
         });</script>
 
 
     <!-- GOOGLE ADWORDS -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-40557418-1', 'auto');
         ga('send', 'pageview');
@@ -95,31 +124,38 @@
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
+            (w[c] = w[c] || []).push(function () {
                 try {
                     w.yaCounter21152362 = new Ya.Metrika({
-                        id:21152362,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true,
-                        webvisor:true
+                        id: 21152362,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
                     });
-                } catch(e) { }
+                } catch (e) {
+                }
             });
 
             var n = d.getElementsByTagName("script")[0],
                     s = d.createElement("script"),
-                    f = function () { n.parentNode.insertBefore(s, n); };
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
             s.type = "text/javascript";
             s.async = true;
             s.src = "https://mc.yandex.ru/metrika/watch.js";
 
             if (w.opera == "[object Opera]") {
                 d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
+            } else {
+                f();
+            }
         })(document, window, "yandex_metrika_callbacks");
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/21152362" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/21152362" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
 
     <!-- VK -->
@@ -128,11 +164,24 @@
 
     <!-- Facebook Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-                document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq)return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq)f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+                document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1360732413940824'); // Insert your pixel ID here.
         fbq('track', 'PageView');
     </script>
@@ -188,8 +237,8 @@
                         <p class="text-content">Ежедневно у нас появляются сотни Горящих предложений путевок.
                             Цены на такие предложения значительно ниже обычных.
                             Мы поможем подобрать тур специально для Вас.</p>
-                        <div class="hide-xs phone-2">
-                            <a href="#simple-form" class="btn-default-ico select-tur" style="margin-top: 15px;">
+                        <div class="hide-xs"> <!--phone-2-->
+                            <a href="http://www.makintour.com/lp/best_offer/mobile/tours/index.html" class="btn-default-ico select-tur" style="margin-top: 15px;">
                                 <span>Подобрать тур</span>
                             </a>
                         </div> <!--onclick="popup.show('#main-form');"-->
@@ -911,22 +960,6 @@
     dataLayer.push({'event': url});
 }</script>
 
-<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=r0pImsR56B8rzynHQ4jnaFgNa6j8r7Q8PD4U2*ScSFv1iQbi6bjRLdsWHT3vPPOe7IrS3T3CjuaJv9Fs4M7b4x9RCtpIMGf5JF2Gk3YKR8hIjzLVekMM21he1/rG7SdooHhj8oRxrKTdDD1o/nmiBoD9wgiRbPSS7n1PmsV70BE-';</script>
-<!-- Google Tag Manager -->
-<noscript>
-    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P3TZFS" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-</noscript>
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-    var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-    j.async = true;
-    j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-    f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-P3TZFS');</script>
-<!-- End Google Tag Manager -->
-
 
 <script>(function ($, d) {
     $.each(readyQ, function (i, f) {
@@ -937,59 +970,29 @@
     })
 })(jQuery, document)</script>
 
-<script type="text/javascript" src="../js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
+ <script type="text/javascript" src="../js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
 
-<script src="../js/jquery-migrate-1.2.1.min.js+jquery.ba-outside-events.min.js+jquery.maskedinput-1.3.min.js+jquery.mousewheel.js+poshytip,_jquery.poshytip.js.pagespeed.jc.aVspYko1lr.js"></script>
-<script>eval(mod_pagespeed_4$$XMk1HGy);</script>
+ <script src="../js/jquery-migrate-1.2.1.min.js+jquery.ba-outside-events.min.js+jquery.maskedinput-1.3.min.js+jquery.mousewheel.js+poshytip,_jquery.poshytip.js.pagespeed.jc.aVspYko1lr.js"></script>
+ <script>eval(mod_pagespeed_4$$XMk1HGy);</script>
 <script>eval(mod_pagespeed_XbI1wWBy$7);</script>
 <script>eval(mod_pagespeed_U27_rqLerW);</script>
 <script>eval(mod_pagespeed_WNk$rTJS41);</script>
 <script>eval(mod_pagespeed_1tjkYP37aE);</script>
-<script type="text/javascript"
+ <script type="text/javascript"
         src="../js/mCustomScrollbar/jquery.mCustomScrollbar.js.pagespeed.jm.8Bx_QH2JL2.js"></script>
 <script type="text/javascript" src="../js/jquery.carouFredSel-6.2.1.js.pagespeed.jm.8QnCotQ9Rz.js"></script>
 <script src="../js/bootstrap,_bootstrap.min.js+global.js,qv==1.2.3+popup.js.pagespeed.jc.brg_phmpX_.js"></script>
-<script>eval(mod_pagespeed_rC2lhyWvpI);</script>
+<!--&lt;!&ndash; <script>eval(mod_pagespeed_rC2lhyWvpI);</script>-->
 <script>eval(mod_pagespeed_wYFuvbM7Ot);</script>
 <script>eval(mod_pagespeed_vIB2kHTt$S);</script>
-<!--<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>-->
+<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
 <link href="../index_files/forma_style.css"
       rel="stylesheet" type="text/css"/>
-<script type="text/javascript" async="" src="../index_files/forma_.js,qv=1.1.2.3.pagespeed.jm.3qVg4zcv4u.js"></script>
+ <script type="text/javascript" async="" src="../index_files/forma_.js,qv=1.1.2.3.pagespeed.jm.3qVg4zcv4u.js"></script>
 <script type="text/javascript">var nowDate = new Date(2017, 0, 13), isIphone = false;</script>
 
 
-<a href="//scroogefrog.com/en/?referrer_id=10875"><img src="//stat.clickfrog.ru/img/clfg_ref/icon_0.png"
-                                                       alt="adware security" data-pagespeed-url-hash="3175142224"
-                                                       onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
-<div id="clickfrog_counter_container" style="width:0px;height:0px;overflow:hidden;"></div>
-<script type="text/javascript">(function (d, w) {
-    var clickfrog = function () {
-        if (!d.getElementById('clickfrog_js_container')) {
-            var sc = document.createElement('script');
-            sc.type = 'text/javascript';
-            sc.async = true;
-            sc.src = "//stat.clickfrog.ru/c.js?r=" + Math.random();
-            sc.id = 'clickfrog_js_container';
-            var c = document.getElementById('clickfrog_counter_container');
-            c.parentNode.insertBefore(sc, c);
-        }
-    };
-    if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", clickfrog, false);
-    } else {
-        clickfrog();
-    }
-})(document, window);</script>
-<noscript>
-    <div style="width:0px;height:0px;overflow:hidden;"><img src="//stat.clickfrog.ru/no_script.php?img"
-                                                            style="width:0px; height:0px;" alt=""
-                                                            data-pagespeed-url-hash="2845556797"/></div>
-</noscript>
-<!--<script type="text/javascript">var clickfrogru_uidh = 'ebb3e0d619ce8737571c3d5f1065865b';</script>-->
-
-
-<script type="text/javascript">//<![CDATA[
+ <script type="text/javascript">//<![CDATA[
 jQuery(window).on('load', function () {
     initMaskedInput();
 });
