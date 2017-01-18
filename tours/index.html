@@ -54,51 +54,17 @@
         });
     </script>
 
-    <script src="../mask/src/jquery.maskedinput.js"></script>
-    <script type="text/javascript">
-        jQuery(function ($) {
-
-            $.mask.definitions['~'] = '[+-]';
-
-            $('#date').mask('99/99/9999');
-
-            $('#tel_phone').mask('(999) 999-9999');
-
-            $('#phoneext').mask("(999) 999-9999? x99999");
-
-            $("#tin").mask("99-9999999");
-
-            $("#ssn").mask("999-99-9999");
-
-            $("#product").mask("a*-999-a999");
-
-            $("#eyescript").mask("~9.99 ~9.99 999");
-
-
-            $.fn.setCursorPosition = function (pos) {
-                this.each(function (index, elem) {
-                    if (elem.setSelectionRange) {
-                        elem.setSelectionRange(pos, pos);
-                    } else if (elem.createTextRange) {
-                        var range = elem.createTextRange();
-                        range.collapse(true);
-                        range.moveEnd('character', pos);
-                        range.moveStart('character', pos);
-                        range.select();
-                    }
-                });
-                return this;
-            };
-            $("#tel").click(function () {
-                var input = $("#tel");
-                input.setCursorPosition(1);
+    <script>
+        function check() {
+            $(document).on('input', 'input[id="tel_phone"]', function () {
+                var amount_of_number = ($(this).val().length);
+                if (amount_of_number != 10) {
+                    alert("Телефон должен состоять из десятки цифр и быть в формате (099)-999-99-99")
+                }
             });
+        }
 
-
-
-
-        });</script>
-
+    </script> <!--onsubmit="check();"-->
 
     <!-- GOOGLE ADWORDS -->
     <script>
@@ -191,6 +157,30 @@
     <!-- DO NOT MODIFY -->
     <!-- End Facebook Pixel Code -->
 
+    <script src="../mask/src/jquery.maskedinput.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+
+            $.mask.definitions['~'] = '[+-]';
+
+            $('#date').mask('99/99/9999');
+
+            $('#tel_phone').mask('(999) 999-9999');
+
+            $('#phoneext').mask("(999) 999-9999? x99999");
+
+            $("#tin").mask("99-9999999");
+
+            $("#ssn").mask("999-99-9999");
+
+            $("#product").mask("a*-999-a999");
+
+            $("#eyescript").mask("~9.99 ~9.99 999");
+
+
+            tel
+        });</script>
+
 </head>
 <body>
 <div id="page">
@@ -238,7 +228,8 @@
                             Цены на такие предложения значительно ниже обычных.
                             Мы поможем подобрать тур специально для Вас.</p>
                         <div class="hide-xs"> <!--phone-2-->
-                            <a href="/mobile/tours/index.html" class="btn-default-ico select-tur" style="margin-top: 15px;">
+                            <a href="http://www.makintour.com/lp/best_offer/mobile/tours/index.html"
+                               class="btn-default-ico select-tur" style="margin-top: 15px;">
                                 <span>Подобрать тур</span>
                             </a>
                         </div> <!--onclick="popup.show('#main-form');"-->
@@ -428,7 +419,7 @@
                     предложений
                 </div>
             </div>
-            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+            <form onsubmit="alert('submit!');return false" action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
                   class="site-form" id="main-pop-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
@@ -728,7 +719,7 @@
                 <!--<h3>&nbsp;</h3>-->
                 Подбор самых выгодных вариантов!
             </div>
-            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+            <form onsubmit="check();" action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
                   class="site-form" id="main-pop3-fast-form" method="post">
                 <input name="id_company" id="id_company" type="hidden" value="2"/>
                 <input name="id_pages" id="id_pages" type="hidden" value="97"/>
@@ -755,7 +746,8 @@
                         <div class="ico ico7"></div>
                         Телефон:</label>
                     <div class="input-place">
-                        <input id="tel_phone" name="phone" type="tel" class="input" required>
+                        <input id="tel_phone" pattern="[0-9]{10}" placeholder="0991234567"
+                               name="phone" type="tel" class="input" required>  <!--pattern="[0-9]{10}"-->
                     </div>
                 </div>
 
@@ -842,7 +834,7 @@
                         <div class="ico ico7"></div>
                         Телефон:</label>
                     <div class="input-place">
-                        <input name="phone" type="text" class="input" required="required"/>
+                        <input id="tel-phone-1" name="phone" type="text" class="input" required="required"/>
                     </div>
                 </div>
 
@@ -970,15 +962,15 @@
     })
 })(jQuery, document)</script>
 
- <script type="text/javascript" src="../js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
 
- <script src="../js/jquery-migrate-1.2.1.min.js+jquery.ba-outside-events.min.js+jquery.maskedinput-1.3.min.js+jquery.mousewheel.js+poshytip,_jquery.poshytip.js.pagespeed.jc.aVspYko1lr.js"></script>
- <script>eval(mod_pagespeed_4$$XMk1HGy);</script>
+<script src="../js/jquery-migrate-1.2.1.min.js+jquery.ba-outside-events.min.js+jquery.maskedinput-1.3.min.js+jquery.mousewheel.js+poshytip,_jquery.poshytip.js.pagespeed.jc.aVspYko1lr.js"></script>
+<script>eval(mod_pagespeed_4$$XMk1HGy);</script>
 <script>eval(mod_pagespeed_XbI1wWBy$7);</script>
 <script>eval(mod_pagespeed_U27_rqLerW);</script>
 <script>eval(mod_pagespeed_WNk$rTJS41);</script>
 <script>eval(mod_pagespeed_1tjkYP37aE);</script>
- <script type="text/javascript"
+<script type="text/javascript"
         src="../js/mCustomScrollbar/jquery.mCustomScrollbar.js.pagespeed.jm.8Bx_QH2JL2.js"></script>
 <script type="text/javascript" src="../js/jquery.carouFredSel-6.2.1.js.pagespeed.jm.8QnCotQ9Rz.js"></script>
 <script src="../js/bootstrap,_bootstrap.min.js+global.js,qv==1.2.3+popup.js.pagespeed.jc.brg_phmpX_.js"></script>
@@ -988,11 +980,11 @@
 <script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
 <link href="../index_files/forma_style.css"
       rel="stylesheet" type="text/css"/>
- <script type="text/javascript" async="" src="../index_files/forma_.js,qv=1.1.2.3.pagespeed.jm.3qVg4zcv4u.js"></script>
+<script type="text/javascript" async="" src="../index_files/forma_.js,qv=1.1.2.3.pagespeed.jm.3qVg4zcv4u.js"></script>
 <script type="text/javascript">var nowDate = new Date(2017, 0, 13), isIphone = false;</script>
 
 
- <script type="text/javascript">//<![CDATA[
+<script type="text/javascript">//<![CDATA[
 jQuery(window).on('load', function () {
     initMaskedInput();
 });

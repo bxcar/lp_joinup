@@ -12525,10 +12525,10 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
-::-webkit-input-placeholder {text-overflow:ellipsis; color: #ec008c;}
-::-moz-placeholder          {text-overflow:ellipsis; color: #ec008c;}/* Firefox 19+ */
-:-moz-placeholder           {text-overflow:ellipsis; color: #ec008c;}/* Firefox 18- */
-:-ms-input-placeholder      {text-overflow:ellipsis; color: #ec008c;}
+/*::-webkit-input-placeholder {text-overflow:ellipsis; color: #ec008c;}*/
+/*::-moz-placeholder          {text-overflow:ellipsis; color: #ec008c;}!* Firefox 19+ *!*/
+/*:-moz-placeholder           {text-overflow:ellipsis; color: #ec008c;}!* Firefox 18- *!*/
+/*:-ms-input-placeholder      {text-overflow:ellipsis; color: #ec008c;}*/
 
 input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.5s ease;}
 input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.5s ease;}

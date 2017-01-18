@@ -2104,6 +2104,7 @@ var popup = {
         $('#return-form .text-val-cnt').text(cnt);
         $('#return-form input[name="phone"]').val(data.phone);
 
+
         var html = '';
         for (var key in data) {
             if (key != 'phone' && key != 'form_type') html += '<textarea name="' + key + '">' + data[key] + '</textarea>';
@@ -2419,3 +2420,4 @@ $(document).ready(function () {
     //if(document.location.pathname.indexOf('/admin/')>-1) return false;
     siteDocReady.init(true);
 });
+
