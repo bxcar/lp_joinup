@@ -34,40 +34,140 @@
         }
     })(window, document)</script>
 
-<style>
-    div.logo div {
-        width: 100%;
-        margin: 4px 0 0 0;
-    }
+    <style>
+        div.logo div {
+            width: 100%;
+            margin: 4px 0 0 0;
+        }
 
-    .mobil>.header .phone-5 {
-        width: 50%;
-        text-align: center;
-        margin: 0;
-        margin-top: 19px;
-    }
-</style>
+        .mobil > .header .phone-5 {
+            width: 50%;
+            text-align: center;
+            margin: 0;
+            margin-top: 19px;
+        }
+    </style>
+    <script src="../../jquery-3.1.1.min.js"></script>
     <script src="../../mask/src/jquery.maskedinput.js"></script>
     <script type="text/javascript">
-        $( document ).ready(function() {
+        $(document).ready(function () {
 
-            $.mask.definitions['~'] = '[+-]';
+//            $.mask.definitions['~'] = '[+-]';
+
+//            $('#tel_phone').mask('+3809');
+
+            $.fn.setCursorPosition = function (pos) {
+                this.each(function (index, elem) {
+                    if (elem.setSelectionRange) {
+                        elem.setSelectionRange(pos, pos);
+                    } else if (elem.createTextRange) {
+                        var range = elem.createTextRange();
+                        range.collapse(true);
+                        range.moveEnd('character', pos);
+                        range.moveStart('character', pos);
+                        range.select();
+                    }
+                });
+                return this;
+            };
+
+            $("input[name=phone]").click(function () {
+                var input = $(this);
+                var p = input[0].selectionStart;
+
+                var str = input.val();
+                var check_last = str[str.length-1];
+
+                if (p == 13 && check_last == '_') {
+                    input.setCursorPosition(4);
+                }
+            });
+
+            $("input[name=phone]").focus(function () {
+                var input = $(this);
+                var p = input[0].selectionStart;
+
+                var str = input.val();
+                var check_last = str[str.length-1];
+
+                if (p == 13 && check_last == '_') {
+                    input.setCursorPosition(4);
+                }
+            });
+        });
 
 
-            $('#tel_phone').mask('(999) 999-9999');
+        function check(element) {
+
+//            $.mask.definitions['~'] = '[+-]';
+
+//            $("input[name=phone]").mask('+3809');
 
 
-            $("#tin").mask("99-9999999");
+            $.fn.setCursorPosition = function (pos) {
+                this.each(function (index, elem) {
+                    if (elem.setSelectionRange) {
+                        elem.setSelectionRange(pos, pos);
+                    } else if (elem.createTextRange) {
+                        var range = elem.createTextRange();
+                        range.collapse(true);
+                        range.moveEnd('character', pos);
+                        range.moveStart('character', pos);
+                        range.select();
+                    }
+                });
+                return this;
+            };
 
-            $("#ssn").mask("999-99-9999");
+//          Maybe not works
+            $("input[name=phone]").focus(function () {
+                var input = $("input[name=phone]");
+                input.setCursorPosition(4);
+            });
 
-            $("#product").mask("a*-999-a999");
+            $("input[name=phone]").click(function () {
+                var input = $(this);
+                var p = input[0].selectionStart;
 
-            $("#eyescript").mask("~9.99 ~9.99 999");
+                var str = input.val();
+                var check_last = str[str.length-1];
+
+                if (p == 13 && check_last == '_') {
+                    input.setCursorPosition(4);
+                }
+            });
+
+            $(element).removeAttr("href");
+            $(element).removeAttr("onmousedown");
+        }
+
+        function check_2(element) {
+//            $.mask.definitions['~'] = '[+-]';
+
+//            $("input[name=phone]").mask('+3809');
 
 
-            tel
-        });</script>
+            $.fn.setCursorPosition = function (pos) {
+                this.each(function (index, elem) {
+                    if (elem.setSelectionRange) {
+                        elem.setSelectionRange(pos, pos);
+                    } else if (elem.createTextRange) {
+                        var range = elem.createTextRange();
+                        range.collapse(true);
+                        range.moveEnd('character', pos);
+                        range.moveStart('character', pos);
+                        range.select();
+                    }
+                });
+                return this;
+            };
+
+            $("input[name=phone]").focus(function () {
+                var input = $("input[name=phone]");
+                input.setCursorPosition(4);
+            });
+        }
+    </script>
 
 </head>
 <body>
@@ -83,7 +183,7 @@
     <div class="header" style="background: #dd127b;">
         <div class="inner">
             <!--<div class="logo-mobile">-->
-                <div style="background-image:url('http://www.makintour.com/lp/best_offer/img/cust/logo.png');
+            <div style="background-image:url('http://www.makintour.com/lp/best_offer/img/cust/logo.png');
                  background-repeat: no-repeat;
                   background-size: 100%;
                   background-position-y: 7px;
@@ -91,8 +191,8 @@
                   width: 50%;
                   max-width: 190px;
                   height: 66px;">
-                    &nbsp;
-                </div>
+                &nbsp;
+            </div>
             <!--</div>-->
             <div class="phone-5"><a href="tel:0 800 800 025">0 800 800 025</a></div>
         </div>
@@ -364,7 +464,10 @@
                 <div class="controls">
                     <!--<label class="control-label">Введите ваш номер телефона</label><br/>-->
                     <h4 class="shipping-address">Введите ваш номер телефона</h4>
-                    <input id="tel_phone" name="phone" type="text" class="input" pattern="[0-9]{10}" placeholder="0991234567" required="required">
+                    <a onmousedown="check(this)" href="javascript:void(0)">
+                        <input onfocus="check_2(this)" id="tel_phone" name="phone" type="tel" class="input"
+                               placeholder="+380991234567" required="required" value="+380"  maxlength="13">
+                    </a>
                 </div>
                 <input type="hidden" name="show" value="mobil">
                 <input type="hidden" name="name" value="">
