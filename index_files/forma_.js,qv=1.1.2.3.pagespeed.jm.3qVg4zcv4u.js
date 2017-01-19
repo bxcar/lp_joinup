@@ -2103,8 +2103,7 @@ var popup = {
         if (parseInt(data.cnn)) cnt += ', ' + data.cnn + ' ' + utils.numberDecline(data.cnn, 'детей', 'ребенок', 'ребенка');
         $('#return-form .text-val-cnt').text(cnt);
         $('#return-form input[name="phone"]').val(data.phone);
-
-
+        
         var html = '';
         for (var key in data) {
             if (key != 'phone' && key != 'form_type') html += '<textarea name="' + key + '">' + data[key] + '</textarea>';
@@ -2221,10 +2220,51 @@ var frm = {
         item.slideToggle(300, function () {
             if (item.is(':visible')) $('.input', item).focus();
         });
+        $.fn.setCursorPosition = function(pos) {
+            this.each(function(index, elem) {
+                if (elem.setSelectionRange) {
+                    elem.setSelectionRange(pos, pos);
+                } else if (elem.createTextRange) {
+                    var range = elem.createTextRange();
+                    range.collapse(true);
+                    range.moveEnd('character', pos);
+                    range.moveStart('character', pos);
+                    range.select();
+                }
+            });
+            return this;
+        };
+        var input = $("input[name=phone]");
+        input.setCursorPosition(4);
+        popup.autoPos();
+    },
+
+    showMask: function (a) {
+        var f = $(a).closest('form');
+        var item = $('.comment-item', f);
+
+
+        $.mask.definitions['~'] = '[+-]';
+        $('input[name=phone]').mask('+380999999999');
+        $.fn.setCursorPosition = function(pos) {
+            this.each(function(index, elem) {
+                if (elem.setSelectionRange) {
+                    elem.setSelectionRange(pos, pos);
+                } else if (elem.createTextRange) {
+                    var range = elem.createTextRange();
+                    range.collapse(true);
+                    range.moveEnd('character', pos);
+                    range.moveStart('character', pos);
+                    range.select();
+                }
+            });
+            return this;
+        };
+        var input = $("input[name=phone]");
+        input.setCursorPosition(4);
         popup.autoPos();
     }
 }
-
 
 $.fn.serializeObject = function () {
     var o = {};
@@ -2420,4 +2460,3 @@ $(document).ready(function () {
     //if(document.location.pathname.indexOf('/admin/')>-1) return false;
     siteDocReady.init(true);
 });
-
