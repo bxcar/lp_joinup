@@ -86,28 +86,28 @@
             };
 
             /*function getCaretPos(obj) {
-                obj.bind('click', function () {
-                    var ta = $('#tel'),
-                            p = ta[0].selectionStart,
-                            text = ta.val();
-                    if(p != undefined)
-                        ta.val(text.slice(0, p) + $(this).val() + text.slice(p));
-                    else{
-                        ta.trigger('focus');
-                        range = document.selection.createRange();
-                        range.text = $(this).val();
-                    }
-                });
-                alert(p);
-                return p;
-            }*/
+             obj.bind('click', function () {
+             var ta = $('#tel'),
+             p = ta[0].selectionStart,
+             text = ta.val();
+             if(p != undefined)
+             ta.val(text.slice(0, p) + $(this).val() + text.slice(p));
+             else{
+             ta.trigger('focus');
+             range = document.selection.createRange();
+             range.text = $(this).val();
+             }
+             });
+             alert(p);
+             return p;
+             }*/
 
             $("input[name=phone]").click(function () {
                 var input = $(this);
                 var p = input[0].selectionStart;
 
                 var str = input.val();
-                var check_last = str[str.length-1];
+                var check_last = str[str.length - 1];
 
                 if (p == 13 && check_last == '_') {
                     input.setCursorPosition(4);
@@ -119,7 +119,7 @@
                 var p = input[0].selectionStart;
 
                 var str = input.val();
-                var check_last = str[str.length-1];
+                var check_last = str[str.length - 1];
 
                 if (p == 13 && check_last == '_') {
                     input.setCursorPosition(4);
@@ -161,7 +161,7 @@
                 var p = input[0].selectionStart;
 
                 var str = input.val();
-                var check_last = str[str.length-1];
+                var check_last = str[str.length - 1];
 
                 if (p == 13 && check_last == '_') {
                     input.setCursorPosition(4);
@@ -303,7 +303,12 @@
     /></noscript>
     <!-- DO NOT MODIFY -->
     <!-- End Facebook Pixel Code -->
-
+    <!--<script src="../js/multi.js"></script>-->
+    <style>
+        .not-hover:hover {
+            opacity: 1 !important;
+        }
+    </style>
 </head>
 <body>
 <div id="page">
@@ -314,7 +319,9 @@
         <div class="inner">
             <ul class="menu">
                 <li class="logo">
-                    <div style="background-image:url(../img/cust/logo.png)">&nbsp;</div>
+                    <a class="not-hover" href="http://www.makintour.com">
+                        <div style="background-image:url(../img/cust/logo.png)">&nbsp;</div>
+                    </a>
                 </li>
                 <li class="phone-22"></li>
                 <li class="phone-22"></li>
@@ -351,11 +358,11 @@
                             Цены на такие предложения значительно ниже обычных.
                             Мы поможем подобрать тур специально для Вас.</p>
                         <div class="hide-xs"> <!--phone-2-->
-                            <a href="http://192.168.0.98/mobile/tours/"
+                            <a href="http://www.makintour.com/lp/best_offer/mobile/tours/index.html"
                                class="btn-default-ico select-tur" style="margin-top: 15px;">
                                 <span>Подобрать тур</span>
                             </a>
-                           <!-- href="http://www.makintour.com/lp/best_offer/mobile/tours/index.html"-->
+                            <!-- href="http://www.makintour.com/lp/best_offer/mobile/tours/index.html"-->
                             <!--href="http://192.168.0.98/mobile/tours/"-->
                         </div> <!--onclick="popup.show('#main-form');"-->
                     </li>
@@ -1097,7 +1104,6 @@
 
 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 
-
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
 
 <script src="../js/jquery-migrate-1.2.1.min.js+jquery.ba-outside-events.min.js+jquery.maskedinput-1.3.min.js+jquery.mousewheel.js+poshytip,_jquery.poshytip.js.pagespeed.jc.aVspYko1lr.js"></script>
@@ -1123,9 +1129,10 @@
 <!--<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>-->
 
 
-<script type="text/javascript">var nowDate = new Date(), isIphone = false; nowDate.setDate(nowDate.getDate()+1);
+<script type="text/javascript">var nowDate = new Date(), isIphone = false;
+nowDate.setDate(nowDate.getDate() + 1);
 /*var mydate = new Date();
-mydate.setDate(nowDate.getDate()+1);*/
+ mydate.setDate(nowDate.getDate()+1);*/
 //var now = new Date();
 //var formated_date = now.format("yyyy-mm-dd");
 //document.getElementById('date').value = formated_date.toString();
@@ -1134,11 +1141,11 @@ mydate.setDate(nowDate.getDate()+1);*/
 var d = new Date();
 //var formated_date = mydate.format("yyyy-mm-dd");
 
-document.getElementById('date').value = d.getDate()+1 + '.' + d.getMonth()+1 + '.' + d.getFullYear();
+document.getElementById('date').value = d.getDate() + 1 + '.' + d.getMonth() + 1 + '.' + d.getFullYear();
 
 window.onload = function () {
     var str = document.getElementById('date').value;
-    document.getElementById('date').value = str.replace(new RegExp("/",'g'),".");
+    document.getElementById('date').value = str.replace(new RegExp("/", 'g'), ".");
 }
 </script>
 <!--<script type="text/javascript">var nowDate = new Date(2017, 0, 13), isIphone = false;</script>-->
