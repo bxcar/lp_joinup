@@ -21,18 +21,18 @@ var multi="египет&отдых|Египет|Египте|египт|егип
 израил|израел;Туры в Израиль<br/>с Гарантией лучшей цены<br/>в Киеве\n\
 не дорого|недорого|дешево|низкая цена;Недорогие Горящие Туры<br/>с Гарантией лучшей цены<br/>в Киеве";
 
+
 yaParams={}
 $(function() {
-
     function getURLParameter(name) {
         return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
     }
     // UTM
     utm=[];
-    jQuery.each(["utm_source","utm_medium","utm_campaign","utm_term",'source_type','source','position_type','position','added','creative','matchtype'],function(i,v){
+    $.each(["utm_source","utm_medium","utm_campaign","utm_term",'source_type','source','position_type','position','added','creative','matchtype'],function(i,v){
         utm[v]=getURLParameter(v) || $.cookie(v);
-        jQuery.cookie(v, utm[v], { expires: 365, path: '/' });
-        jQuery('<input type="hidden" />').attr({
+        $.cookie(v, utm[v], { expires: 365, path: '/' });
+        $('<input type="hidden" />').attr({
             name: "content["+v+"]",
             value: utm[v]
         }).appendTo("form");
@@ -53,7 +53,7 @@ $(function() {
         });
         if(multi[0]){
             ab_title=multi[0].val;
-            jQuery("h1").html(ab_title);
+            $("#for-multi").html(ab_title);
             /*jQuery(".subtitle-none").html('');
             jQuery(".text-slider-none").addClass('text-slider-new');*/
         }
