@@ -19,7 +19,7 @@ $cnn = trim($_POST['cnn']);
 $form_type = trim($_POST['form_type']);
 $country = trim($_POST['country']);
 
-if(!empty($phone) && isset($phone)) {
+if(!empty($phone) && isset($phone) && $phone != '+380') {
 
 // Формирование заголовка письма
 
@@ -108,6 +108,8 @@ if(!empty($phone) && isset($phone)) {
                 '&u_email='.urlencode($email).
                 '&note='.
                 'Бюджет: '.urlencode($budget)."\n".
+                'Телефон: '.urlencode($phone)."\n".
+                'Email: '.urlencode($email)."\n".
                 'Комментарий:'.urlencode($comment)."\n".
                 'Страна(1): '.urlencode($country)."\n".
                 'Город вылета: '.urlencode($city)."\n".
@@ -139,3 +141,4 @@ else {
 }
 
 ?>
+

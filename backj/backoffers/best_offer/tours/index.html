@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="Ежедневно у нас появляются сотни Горящих предложений путевок.
+     Цены на такие предложения значительно ниже обычных. Мы поможем подобрать тур специально для Вас.">
+    <meta name="keywords"
+          content="Горящие путевки,  Огромный выбор горящих туров, Вылеты со всех городов Украины"/>
+    <link href="../img/favicon.ico" rel="icon"/>
+    <link rel="stylesheet" type="text/css"
+          href="../style.css"/>
+
+
+    <title>Оставьте заявку</title>
+
+    <script>(function (w, d, u) {
+        w.readyQ = [];
+        w.bindReadyQ = [];
+        function p(x, y) {
+            if (x == "ready") {
+                w.bindReadyQ.push(y);
+            } else {
+                w.readyQ.push(x);
+            }
+        };
+        var a = {ready: p, bind: p};
+        w.$ = w.jQuery = function (f) {
+            if (f === d || f === u) {
+                return a
+            } else {
+                p(f)
+            }
+        }
+    })(window, document)</script>
+
+    <script src="../jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".phone-2").on("click", "a", function (event) {
+                //отменяем стандартную обработку нажатия по ссылке
+                event.preventDefault();
+
+                //забираем идентификатор бока с атрибута href
+                var id = $(this).attr('href'),
+
+                //узнаем высоту от начала страницы до блока на который ссылается якорь
+                        top = $(id).offset().top;
+
+                //анимируем переход на расстояние - top за 700 мс
+                $('body,html').animate({scrollTop: top}, 700);
+            });
+        });
+    </script>
+
+    <script>
+        function check() {
+            $(document).on('input', 'input[id="tel_phone"]', function () {
+                var amount_of_number = ($(this).val().length);
+                if (amount_of_number != 10) {
+                    alert("Телефон должен состоять из десятки цифр и быть в формате (099)-999-99-99")
+                }
+            });
+        }
+
+    </script> <!--onsubmit="check();"-->
+
+    <!-- GOOGLE ADWORDS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-40557418-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- //-->
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter21152362 = new Ya.Metrika({
+                        id: 21152362,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/21152362" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- VK -->
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=odaI0kbwfJ2CodWIqHQIrWhFZynZZg*NhBc*T4LQpO4D6RJkp9ch4KFvWcb5ZZ1fleGAMaqHs8keju94UJbNzmdsu*QJojd0ZI*UvRtY3pjTBnCs7cnfhzJLDlvDplLVkO6ff5bJy*l6iaxUJAc/FUAFBRwBg1x851PENqS5G2A-&pixel_id=1000015421';</script>
+    <!-- //-->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq)return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq)f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+                document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1360732413940824'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1360732413940824&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+    <script src="../mask/src/jquery.maskedinput.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+
+            $.mask.definitions['~'] = '[+-]';
+
+            $('#date').mask('99/99/9999');
+
+            $('#tel_phone').mask('(999) 999-9999');
+
+            $('#phoneext').mask("(999) 999-9999? x99999");
+
+            $("#tin").mask("99-9999999");
+
+            $("#ssn").mask("999-99-9999");
+
+            $("#product").mask("a*-999-a999");
+
+            $("#eyescript").mask("~9.99 ~9.99 999");
+
+
+            tel
+        });</script>
+
+</head>
+<body>
+<div id="page">
+
+    <script type="text/javascript">var GLOBAL_country_id = 12;</script>
+
+    <div class="header">
+        <div class="inner">
+            <ul class="menu">
+                <li class="logo">
+                    <div style="background-image:url(../img/cust/logo.png)">&nbsp;</div>
+                </li>
+                <li class="phone-22"></li>
+                <li class="phone-22"></li>
+                <li class="phone-2">
+                    <!--<a class="btn-default-ico question popup_show"
+                       href="javascript:;"><span style="font-size: 18px; line-height: 20px; text-transform: none;">Подберите <br/>мне тур</span></a>-->
+                    <a href="#simple-form" class="btn-default-ico question">
+                        <span style="font-size: 18px; line-height: 20px; text-transform: none;">
+                            Подберите <br/>мне тур
+                        </span>
+                    </a>
+                </li>
+                <li class="question"><a href="tel:0 800 800 025">0 800 800 025</a><br>
+                    <span class="bottom-tel-text">ЗВОНКИ БЕСПЛАТНЫЕ</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="slider-top" style="background: #000">
+            <div class="background">
+                <ul>
+                    <li style="background:url(../img/cust/back1.jpg); opacity: 0.5; background-size: cover;"
+                        data-parallax="background"></li>
+                </ul>
+            </div>
+            <div class="text">
+                <ul>
+                    <li>
+                        <h1>ОСТАВЬТЕ ЗАЯВКУ </h1>
+                        <p class="header-2">на <span>подбор тура</span></p>
+                        <p class="text-content">Ежедневно у нас появляются сотни Горящих предложений путевок.
+                            Цены на такие предложения значительно ниже обычных.
+                            Мы поможем подобрать тур специально для Вас.</p>
+                        <div class="hide-xs"> <!--phone-2-->
+                            <a href="http://www.makintour.com/lp/best_offer/mobile/tours/index.html"
+                               class="btn-default-ico select-tur" style="margin-top: 15px;">
+                                <span>Подобрать тур</span>
+                            </a>
+                        </div> <!--onclick="popup.show('#main-form');"-->
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <div class="inner">
+                    <div class="header">
+                        <div class="clear"></div>
+                        <div class="layer">
+                            <div class="search-form">
+                                <!--<div class="title">Шри Ланка из Киева <strong>Просто заполните форму!</strong></div>-->
+                                <div class="inner">
+                                    <form onsubmit="siteForms.showFast(this);return false" id="main-top-fast-form">
+                                        <div class="item select-item">
+                                            <label class="label">Страна</label>
+                                            <select name="departure">
+                                                <option selected value="Египет">Египет</option>
+                                                <option value="Австрия">Австрия</option>
+                                                <option value="Беларусь">Беларусь</option>
+                                                <option value="Бельгия">Бельгия</option>
+                                                <option value="Болгария">Болгария</option>
+                                                <option value="Венгрия">Венгрия</option>
+                                                <option value="Германия">Германия</option>
+                                                <option value="Голландия">Голландия</option>
+                                                <option value="Греция">Греция</option>
+                                                <option value="Грузия">Грузия</option>
+                                                <option value="Дания">Дания</option>
+                                                <option value="Испания">Испания</option>
+                                                <option value="Италия">Италия</option>
+                                                <option value="Кипр">Кипр</option>
+                                                <option value="Латвия">Латвия</option>
+                                                <option value="Литва">Литва</option>
+                                                <option value="Нидерланды">Нидерланды</option>
+                                                <option value="Норвегия">Норвегия</option>
+                                                <option value="Польша">Польша</option>
+                                                <option value="Португалия">Португалия</option>
+                                                <option value="Румыния">Румыния</option>
+                                                <option value="Словакия">Словакия</option>
+                                                <option value="Словения">Словения</option>
+                                                <option value="Украина">Украина</option>
+                                                <option value="Финляндия">Финляндия</option>
+                                                <option value="Франция">Франция</option>
+                                                <option value="Хорватия">Хорватия</option>
+                                                <option value="Черногория">Черногория</option>
+                                                <option value="Чехия">Чехия</option>
+                                                <option value="Швейцария">Швейцария</option>
+                                                <option value="Швеция">Швеция</option>
+                                                <option value="Эстония">Эстония</option>
+                                                <option value="Бали">Бали</option>
+                                                <option value="Вьетнам">Вьетнам</option>
+                                                <option value="Израиль">Израиль</option>
+                                                <option value="Индия">Индия</option>
+                                                <option value="Индонезия">Индонезия</option>
+                                                <option value="Иордания">Иордания</option>
+                                                <option value="Китай">Китай</option>
+                                                <option value="Малайзия">Малайзия</option>
+                                                <option value="Мальдивы">Мальдивы</option>
+                                                <option value="Сингапур">Сингапур</option>
+                                                <option value="Тайланд">Тайланд</option>
+                                                <option value="Турция">Турция</option>
+                                                <option value="Фиджи">Фиджи</option>
+                                                <option value="Филиппины">Филиппины</option>
+                                                <option value="Шри-Ланка">Шри-Ланка</option>
+                                                <option value="Южная Корея">Южная Корея</option>
+                                                <option value="Кения">Кения</option>
+                                                <option value="Маврикий">Маврикий</option>
+                                                <option value="ОАЭ">ОАЭ</option>
+                                                <option value="Сейшелы">Сейшелы</option>
+                                                <option value="Тунис">Тунис</option>
+                                                <option value="Мексика">Мексика</option>
+                                                <option value="США">США</option>
+                                                <option value="Аргентина">Аргентина</option>
+                                                <option value="Багамы">Багамы</option>
+                                                <option value="Барбадос">Барбадос</option>
+                                                <option value="Бразилия">Бразилия</option>
+                                                <option value="Доминикана">Доминикана</option>
+                                                <option value="Куба">Куба</option>
+                                                <option value="Перу">Перу</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="item date-item">
+                                            <label class="label">Дата вылета</label>
+                                            <input name="date" class="site-date" value="13.01.2017"/>
+                                        </div>
+                                        <div class="item spinner-item">
+                                            <label class="label">Ночей</label>
+                                            <div class="control" data-min="1" data-max="31" data-value="7"
+                                                 data-name="nights">
+                                                <button type="button" class="minus"></button>
+                                                <div class="text1">7</div>
+                                                <button type="button" class="plus"></button>
+                                            </div>
+                                        </div>
+                                        <div class="item spinner-item">
+                                            <label class="label">Взрослых</label>
+                                            <div class="control" data-min="1" data-max="10" data-value="2"
+                                                 data-name="adt">
+                                                <button type="button" class="minus"></button>
+                                                <div class="text1">2</div>
+                                                <button type="button" class="plus"></button>
+                                            </div>
+                                        </div>
+                                        <div class="item spinner-item">
+                                            <label class="label">Детей</label>
+                                            <div class="control" data-min="0" data-max="10" data-value="0"
+                                                 data-name="cnn">
+                                                <button type="button" class="minus"></button>
+                                                <div class="text1">0</div>
+                                                <button type="button" class="plus"></button>
+                                            </div>
+                                        </div>
+                                        <div class="item button-item">
+                                            <label class="label">&nbsp;</label>
+                                            <button class="yellow-button" type="submit">Подобрать</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<br/>-->
+                    <!--<a class="btn-bottom" href="#vouchers" data-btn-type="anchor-link"><span></span></a>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preference">
+        <p class="head">Наши преимущества</p>
+        <div class="list-wrap">
+            <ul>
+                <li class="p5">
+                    <span class="title">Огромный выбор горящих туров</span>
+                    <span class="text"></span>
+                </li>
+                <li class="p6">
+                    <span class="title">Высокий уровень сервиса 24/7</span>
+                    <span class="text"></span>
+                </li>
+                <li class="p7">
+                    <span class="title">Индивиальный подход к&nbsp;клиентам</span>
+                    <span class="text"></span>
+                </li>
+                <li class="p8">
+                    <span class="title">Более 27 000 довольных&nbsp;клиентов</span>
+                    <span class="text"></span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="preference simple-form" id="simple-form">
+        <div class="form-container" id="form-container">
+            <form class="form-simple"
+                  action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  method="post">
+                <p>
+                    Заявка на подбор тура<br>
+                    <span>Гарантия лучшей цены</span>
+                </p>
+                <div>
+                    <input type="text" id="name" name="name" placeholder="  Имя" required>
+                    <input type="tel" id="tel" name="phone" placeholder="  Телефон" required>
+                    <input type="email" id="email" name="email" placeholder="  Email">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="hide">
+        <div class="popup-form steps-form" id="main-form">
+            <div class="title cst-popup-form-title cst-popup-form-title">
+                <div class="main-title">
+                    <h3>Быстрый подбор тура</h3>
+                    Подбор самых выгодных вариантов!
+                </div>
+                <div class="step-6-title">
+                    Для вас мы подберем самые выгодные варианты отдыха<br/>и предоставим на выбор несколько
+                    предложений
+                </div>
+            </div>
+            <form onsubmit="alert('submit!');return false" action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop-fast-form" method="post">
+                <input name="id_company" id="id_company" type="hidden" value="2"/>
+                <input name="id_pages" id="id_pages" type="hidden" value="97"/>
+                <input name="city" id="city" type="hidden" value="0"/>
+                <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
+
+
+                <input type="hidden" name="is_fast" value="0"/>
+                <input type="hidden" name="form_type" value="main"/>
+                <ul class="steps clearfix">
+                    <li onclick="mainStepForm.setStep(this)" class="checked selected active" data-step="1">1</li>
+                    <li onclick="mainStepForm.setStep(this)" data-step="2">2</li>
+                    <li onclick="mainStepForm.setStep(this)" data-step="3">3</li>
+                    <li onclick="mainStepForm.setStep(this)" data-step="4">4</li>
+                    <li onclick="mainStepForm.setStep(this)" data-step="5">5</li>
+                    <li onclick="mainStepForm.setStep(this)" data-step="6">6</li>
+                </ul>
+                <div class="step-item step-item-1">
+                    <div class="item">
+                        <label class="label">
+                            <div class="ico ico1"></div>
+                            Город вылета</label>
+                        <div class="input-place">
+                            <select name="city" data-placeholder="Выберите"
+                                    onchange="mainStepForm.goToStep(2)">
+                                <option value="Киев">Киев</option>
+                                <option value="Днепропетровск">Днепропетровск</option>
+                                <option value="Запорожье">Запорожье</option>
+                                <option value="Львов">Львов</option>
+                                <option value="Одесса">Одесса</option>
+                                <option value="Харьков">Харьков</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button class="yellow-button next-button" onclick="mainStepForm.goToStep(3)" type="button">
+                            Далее
+                        </button>
+                    </div>
+                </div>
+                <div class="step-item step-item-2">
+                    <div class="item">
+                        <label class="label">
+                            <div class="ico ico1"></div>
+                            Куда летим?</label>
+                        <div class="input-place">
+                            <select name="country" onchange="siteForms.getResorts(this)">
+                                <option selected value="Египет">Египет</option>
+                                <option value="Австрия">Австрия</option>
+                                <option value="Беларусь">Беларусь</option>
+                                <option value="Бельгия">Бельгия</option>
+                                <option value="Болгария">Болгария</option>
+                                <option value="Венгрия">Венгрия</option>
+                                <option value="Германия">Германия</option>
+                                <option value="Голландия">Голландия</option>
+                                <option value="Греция">Греция</option>
+                                <option value="Грузия">Грузия</option>
+                                <option value="Дания">Дания</option>
+                                <option value="Испания">Испания</option>
+                                <option value="Италия">Италия</option>
+                                <option value="Кипр">Кипр</option>
+                                <option value="Латвия">Латвия</option>
+                                <option value="Литва">Литва</option>
+                                <option value="Нидерланды">Нидерланды</option>
+                                <option value="Норвегия">Норвегия</option>
+                                <option value="Польша">Польша</option>
+                                <option value="Португалия">Португалия</option>
+                                <option value="Румыния">Румыния</option>
+                                <option value="Словакия">Словакия</option>
+                                <option value="Словения">Словения</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Финляндия">Финляндия</option>
+                                <option value="Франция">Франция</option>
+                                <option value="Хорватия">Хорватия</option>
+                                <option value="Черногория">Черногория</option>
+                                <option value="Чехия">Чехия</option>
+                                <option value="Швейцария">Швейцария</option>
+                                <option value="Швеция">Швеция</option>
+                                <option value="Эстония">Эстония</option>
+                                <option value="Бали">Бали</option>
+                                <option value="Вьетнам">Вьетнам</option>
+                                <option value="Израиль">Израиль</option>
+                                <option value="Индия">Индия</option>
+                                <option value="Индонезия">Индонезия</option>
+                                <option value="Иордания">Иордания</option>
+                                <option value="Китай">Китай</option>
+                                <option value="Малайзия">Малайзия</option>
+                                <option value="Мальдивы">Мальдивы</option>
+                                <option value="Сингапур">Сингапур</option>
+                                <option value="Тайланд">Тайланд</option>
+                                <option value="Турция">Турция</option>
+                                <option value="Фиджи">Фиджи</option>
+                                <option value="Филиппины">Филиппины</option>
+                                <option value="Шри-Ланка">Шри-Ланка</option>
+                                <option value="Южная Корея">Южная Корея</option>
+                                <option value="Кения">Кения</option>
+                                <option value="Маврикий">Маврикий</option>
+                                <option value="ОАЭ">ОАЭ</option>
+                                <option value="Сейшелы">Сейшелы</option>
+                                <option value="Тунис">Тунис</option>
+                                <option value="Мексика">Мексика</option>
+                                <option value="США">США</option>
+                                <option value="Аргентина">Аргентина</option>
+                                <option value="Багамы">Багамы</option>
+                                <option value="Барбадос">Барбадос</option>
+                                <option value="Бразилия">Бразилия</option>
+                                <option value="Доминикана">Доминикана</option>
+                                <option value="Куба">Куба</option>
+                                <option value="Перу">Перу</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button class="yellow-button next-button" onclick="mainStepForm.goToStep(3)" type="button">
+                            Далее
+                        </button>
+                    </div>
+                </div>
+                <div class="step-item step-item-3">
+                    <div class="item">
+                        <label class="label">
+                            <div class="ico ico1"></div>
+                            Когда вылетаем?</label>
+                        <div class="input-place date-item">
+                            <input class="site-date" name="date" onchange="mainStepForm.goToStep(4)"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button class="yellow-button next-button" onclick="mainStepForm.goToStep(4)" type="button">
+                            Далее
+                        </button>
+                    </div>
+                </div>
+                <div class="step-item step-item-4">
+                    <div class="item spinner-item">
+                        <label class="label">
+                            <div class="ico ico4"></div>
+                            На сколько дней:</label>
+                        <div class="input-place">
+                            <div class="control" data-min="1" data-max="31" data-value="7" data-name="nights">
+                                <button type="button" class="minus"></button>
+                                <div class="text1">7</div>
+                                <button type="button" class="plus"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button class="yellow-button next-button" onclick="mainStepForm.goToStep(5)" type="button">
+                            Далее
+                        </button>
+                    </div>
+                </div>
+                <div class="step-item step-item-5">
+                    <div class="item spinner-item">
+                        <label class="label">
+                            <div class="ico ico5"></div>
+                            Сколько людей?</label>
+                        <div class="input-place">
+                            <div class="control" data-min="1" data-max="10" data-value="2" data-name="adt">
+                                <button type="button" class="minus"></button>
+                                <div class="text1">2</div>
+                                <button type="button" class="plus"></button>
+                            </div>
+                            <span class="descr">взрослых</span><br/>
+                            <div class="control" data-min="0" data-max="10" data-value="0" data-name="cnn">
+                                <button type="button" class="minus"></button>
+                                <div class="text1">0</div>
+                                <button type="button" class="plus"></button>
+                            </div>
+                            <span class="descr">детей</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button class="yellow-button next-button" onclick="mainStepForm.goToStep(6)" type="button">
+                            Далее
+                        </button>
+                    </div>
+                </div>
+                <div class="step-item step-item-6">
+                    <div class="item" data-name="all">
+                        <label class="label">
+                            <div class="ico ico6"></div>
+                            Ваше имя:</label>
+                        <div class="input-place">
+                            <input name="name" type="text" class="input"/>
+                        </div>
+                    </div>
+                    <div class="item" data-name="all">
+                        <label class="label">
+                            <div class="ico ico7"></div>
+                            Телефон:</label>
+                        <div class="input-place">
+                            <input name="phone" type="text" class="input" required>
+                        </div>
+                    </div>
+                    <div class="item" data-name="all">
+                        <label class="label">
+                            <div class="ico ico8"></div>
+                            E-mail:</label>
+                        <div class="input-place">
+                            <input name="email" type="email" class="input"/>
+                            <!--<label class="subscribe"><input class="pseudo-checkbox-init" type="checkbox" name="subscribe" value="Y" checked /> Подписаться на лучшие предложения</label>-->
+                        </div>
+                    </div>
+                    <div class="item" data-name="all">
+                        <label class="label">
+                            <div class="ico ico9"></div>
+                            Бюджет:</label>
+                        <div class="input-place">
+                            <input name="budget" type="text" class="input"/>
+
+                        </div>
+                    </div>
+
+                    <div data-name="all">
+                        <div class="item not-border  comment-link-item">
+                            <label class="label">
+                                <div class="ico ico10"></div>
+                                <a class="pseudo" onclick="frm.showCommentItem(this)" href="javascript:void(0)">Добавить
+                                    комментарий</a></label>
+                        </div>
+                        <div class="item not-border comment-item hide">
+                            <textarea class="input" name="comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <button type="submit" class="yellow-button">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="popup-form" id="phone-form">
+            <div class="title title-one-line">
+                <h3>Заказать звонок</h3>
+            </div>
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop2-fast-form">
+                <input name="id_company" id="id_company" type="hidden" value="2"/>
+                <input name="id_pages" id="id_pages" type="hidden" value="97"/>
+                <input name="city" id="city" type="hidden" value="0"/>
+                <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
+                <input type="hidden" name="phone_type" value="phone"/>
+                <input type="hidden" name="form_type" value="phone"/>
+                <input type="hidden" name="country" value=""/>
+
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico6"></div>
+                        Ваше имя:</label>
+                    <div class="input-place">
+                        <input name="name" type="text" class="input"/>
+                    </div>
+                </div>
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico7"></div>
+                        Телефон:</label>
+                    <div class="input-place">
+                        <input name="phone" type="text" class="input" required="required"/>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">
+                        <div class="ico ico3"></div>
+                        Удобное время:</label>
+                    <div class="input-place">
+                        <select name="time_type" data-variant-next="time">
+                            <option value="1">В ближайшее время</option>
+                            <option value="2">В конкретное время</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="item" data-variant="time" data-variant-value="2" data-need-required="true">
+                    <label class="label">Укажите время:</label>
+                    <div class="input-place">
+                        <input class="input" name="time"/>
+                    </div>
+                </div>
+                <div data-name="all">
+                    <div class="item not-border comment-link-item">
+                        <label class="label">
+                            <div class="ico ico10"></div>
+                            <a class="pseudo" onclick="frm.showCommentItem(this)" href="javascript:void(0)">Добавить
+                                комментарий</a></label>
+                    </div>
+                    <div class="item not-border comment-item hide">
+                        <textarea class="input" name="comment"></textarea>
+                    </div>
+                </div>
+                <div class="item not-border button-item" data-name="all">
+                    <button type="submit" class="yellow-button">Отправить</button>
+                </div>
+            </form>
+        </div>
+        <div class="popup-form" id="fast-form">
+            <div class="title">
+                <!--<h3>&nbsp;</h3>-->
+                Подбор самых выгодных вариантов!
+            </div>
+            <form onsubmit="check();" action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop3-fast-form" method="post">
+                <input name="id_company" id="id_company" type="hidden" value="2"/>
+                <input name="id_pages" id="id_pages" type="hidden" value="97"/>
+                <input name="city" id="city" type="hidden" value="0"/>
+                <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
+                <input type="hidden" name="departure"/>
+                <input type="hidden" name="resort"/>
+                <input type="hidden" name="date"/>
+                <input type="hidden" name="nights"/>
+                <input type="hidden" name="adt"/>
+                <input type="hidden" name="cnn"/>
+                <input type="hidden" name="form_type" value="fast"/>
+                <input type="hidden" name="country" value=""/>
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico6"></div>
+                        Ваше имя:</label>
+                    <div class="input-place">
+                        <input name="name" type="text" class="input" required>
+                    </div>
+                </div>
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico7"></div>
+                        Телефон:</label>
+                    <div class="input-place">
+                        <input id="tel_phone" pattern="[0-9]{10}" placeholder="0991234567"
+                               name="phone" type="tel" class="input" required>  <!--pattern="[0-9]{10}"-->
+                    </div>
+                </div>
+
+
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico8"></div>
+                        E-mail:</label>
+                    <div class="input-place">
+                        <input name="email" type="email" class="input"/>
+                        <!--<label class="subscribe"><input class="pseudo-checkbox-init" type="checkbox" name="subscribe" value="Y" checked /> Подписаться на лучшие предложения</label>-->
+                    </div>
+                </div>
+
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico9"></div>
+                        Бюджет:</label>
+                    <div class="input-place">
+                        <input name="budget" type="text" class="input"/>
+                    </div>
+                </div>
+
+                <div data-name="all">
+                    <div class="item not-border  comment-link-item">
+                        <label class="label">
+                            <div class="ico ico10"></div>
+                            <a class="pseudo" onclick="frm.showCommentItem(this)" href="javascript:void(0)">Добавить
+                                комментарий</a></label>
+                    </div>
+                    <div class="item not-border comment-item hide">
+                        <textarea class="input" name="comment"></textarea>
+                    </div>
+                </div>
+                <div class="item not-border button-item" data-name="all">
+                    <button type="submit" class="yellow-button">Отправить</button>
+                    <!--<input type="submit" value="Отправить">-->
+                </div>
+            </form>
+        </div>
+        <div class="popup-form" id="hot-form">
+            <div class="title">
+                <h3>Горящий тур</h3>
+                Подбор самых выгодных вариантов!
+            </div>
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop4-fast-form">
+                <input name="id_company" id="id_company" type="hidden" value="2"/>
+                <input name="id_pages" id="id_pages" type="hidden" value="97"/>
+                <input name="city" id="city" type="hidden" value="0"/>
+                <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
+                <input type="hidden" name="hot_id" value="0"/>
+                <input type="hidden" name="form_type" value="hot"/>
+                <input type="hidden" name="country" value=""/>
+                <div class="item">
+                    <label class="label">
+                        <div class="ico ico1"></div>
+                        Страна</label>
+                    <div class="input-place">
+                        <select name="departure" data-placeholder="Выберите" data-next="all">
+                            <option value=""></option>
+
+                            <option value="3">Киев</option>
+                            <option value="1">Днепропетровск</option>
+                            <option value="2">Запорожье</option>
+
+                            <option value="4">Львов</option>
+                            <option value="5">Одесса</option>
+                            <option value="6">Харьков</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico6"></div>
+                        Ваше имя:</label>
+                    <div class="input-place">
+                        <input name="name" type="text" class="input"/>
+                    </div>
+                </div>
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico7"></div>
+                        Телефон:</label>
+                    <div class="input-place">
+                        <input id="tel-phone-1" name="phone" type="text" class="input" required="required"/>
+                    </div>
+                </div>
+
+
+                <div data-name="all">
+                    <div class="item not-border  comment-link-item">
+                        <label class="label">
+                            <div class="ico ico10"></div>
+                            <a class="pseudo" onclick="frm.showCommentItem(this)" href="javascript:void(0)">Добавить
+                                комментарий</a></label>
+                    </div>
+                    <div class="item not-border comment-item hide">
+                        <textarea class="input" name="comment"></textarea>
+                    </div>
+                </div>
+                <div class="item not-border button-item" data-name="all">
+                    <button type="submit" class="yellow-button">Отправить</button>
+                </div>
+            </form>
+        </div>
+        <div class="popup-form return-form" id="return-form">
+
+            <div class="title" style="height:auto">
+                <h3>Лучшие предложения будут у вас в один клик!</h3>
+            </div>
+            <form action="http://coraltravel.kiev.ua/wp-content/themes/sydney/sendmessage_for_lp_mk/sendmessage_lp_join.php"
+                  class="site-form" id="main-pop5-fast-form" method="post">
+                <input name="id_company" id="id_company" type="hidden" value="2"/>
+                <input name="id_pages" id="id_pages" type="hidden" value="97"/>
+                <input name="city" id="city" type="hidden" value="0"/>
+                <input name="city_yandex" id="city_yandex" type="hidden" value="0"/>
+                <input type="hidden" name="country" value=""/>
+                <input type="hidden" name="form_type" value="return"/>
+                <div class="hidden-inputs"></div>
+                <div class="inner-title">Вы выбрали</div>
+                <table>
+                    <tr>
+                        <td>Страна</td>
+                        <td class="val text-val-city"></td>
+                    </tr>
+                    <tr>
+                        <td>Дата вылета</td>
+                        <td class="val text-val-date"></td>
+                    </tr>
+                    <tr>
+                        <td>Кол-во ночей</td>
+                        <td class="val text-val-days"></td>
+                    </tr>
+                    <tr>
+                        <td>Кол-во человек</td>
+                        <td class="val text-val-cnt"></td>
+                    </tr>
+                </table>
+                <div class="item" data-name="all">
+                    <label class="label">
+                        <div class="ico ico7"></div>
+                        Телефон:</label>
+                    <div class="input-place">
+                        <input pattern="[0-9]{10}" placeholder="0991234567" name="phone" type="text" class="input" required="required"/>
+                    </div>
+                </div>
+                <div class="item not-border button-item" data-name="all">
+                    <button type="submit" class="yellow-button">Отправить</button>
+                </div>
+            </form>
+        </div>
+        <div id="main-form-thanks" data-class-name="thanks-form"><h3 class="cst-h3">Быстрый подбор тура</h3>Спасибо!
+            Ваша заявка
+            отправлена. В ближайшее время с Вами свяжется наш менеджер.
+        </div>
+        <div id="phone-form-thanks" data-class-name="thanks-form"><h3>Заказать звонок</h3>Спасибо! Ваша заявка
+            отправлена. Наш менеджер свяжется с Вами.
+        </div>
+        <div id="hot-form-thanks" data-class-name="thanks-form"><h3>Горящий тур</h3>Спасибо! Ваша заявка отправлена.
+            В ближайшее время с Вами свяжется наш менеджер.
+        </div>
+    </div>
+
+
+    <style>.f li a:hover {
+        text-decoration: underline
+    }</style>
+
+</div>
+<footer class="footer_wrap">
+    <div class="footer_inner">
+        <p>Присоединяйтесь к нам</p>
+        <div class="copy_line cf">
+            <!--<li><a href="/about_us" >О нас</a></li>-->
+            <a class="social-images" href="https://www.facebook.com/my.makintour" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/fb.png">
+            </a>
+            <a class="social-images" href="https://vk.com/makintour" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/vk.png">
+            </a>
+            <a class="social-images" href="https://ok.ru/makintour" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/ok.png">
+            </a>
+            <a class="social-images" href="https://www.instagram.com/makintour/" target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/inst.png">
+            </a>
+            <a class="social-images" href="https://plus.google.com/117054385108175084294?hl=ru"
+               target="_blank">
+                <img style="width: 4%; min-width: 35px;" src="../img/cust/socials/gg.png">
+            </a>
+        </div>
+        <p class="copyright"><span>Copyright © MAKINTOUR Все права защищены</span></p>
+    </div>
+</footer>
+
+<script>function pageviewSend(url) {
+    var loc = window.location.pathname;
+    var send = loc + ' - ' + url;
+    console.log(send);
+    dataLayer.push({'event': url});
+}</script>
+
+
+<script>(function ($, d) {
+    $.each(readyQ, function (i, f) {
+        $(f)
+    });
+    $.each(bindReadyQ, function (i, f) {
+        $(d).bind("ready", f)
+    })
+})(jQuery, document)</script>
+
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
+
+<script src="../js/jquery-migrate-1.2.1.min.js+jquery.ba-outside-events.min.js+jquery.maskedinput-1.3.min.js+jquery.mousewheel.js+poshytip,_jquery.poshytip.js.pagespeed.jc.aVspYko1lr.js"></script>
+<script>eval(mod_pagespeed_4$$XMk1HGy);</script>
+<script>eval(mod_pagespeed_XbI1wWBy$7);</script>
+<script>eval(mod_pagespeed_U27_rqLerW);</script>
+<script>eval(mod_pagespeed_WNk$rTJS41);</script>
+<script>eval(mod_pagespeed_1tjkYP37aE);</script>
+<script type="text/javascript"
+        src="../js/mCustomScrollbar/jquery.mCustomScrollbar.js.pagespeed.jm.8Bx_QH2JL2.js"></script>
+<script type="text/javascript" src="../js/jquery.carouFredSel-6.2.1.js.pagespeed.jm.8QnCotQ9Rz.js"></script>
+<script src="../js/bootstrap,_bootstrap.min.js+global.js,qv==1.2.3+popup.js.pagespeed.jc.brg_phmpX_.js"></script>
+<!--&lt;!&ndash; <script>eval(mod_pagespeed_rC2lhyWvpI);</script>-->
+<script>eval(mod_pagespeed_wYFuvbM7Ot);</script>
+<script>eval(mod_pagespeed_vIB2kHTt$S);</script>
+<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
+<link href="../index_files/forma_style.css"
+      rel="stylesheet" type="text/css"/>
+<script type="text/javascript" async="" src="../index_files/forma_.js,qv=1.1.2.3.pagespeed.jm.3qVg4zcv4u.js"></script>
+<script type="text/javascript">var nowDate = new Date(2017, 0, 13), isIphone = false;</script>
+
+
+<script type="text/javascript">//<![CDATA[
+jQuery(window).on('load', function () {
+    initMaskedInput();
+});
+//]]></script>
+</body>
+</html>
+
+
