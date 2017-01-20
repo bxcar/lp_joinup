@@ -439,7 +439,8 @@
                                         </div>
                                         <div class="item date-item">
                                             <label class="label">Дата вылета</label>
-                                            <input name="date" class="site-date" value="13.01.2017"/>
+
+                                            <input id="date" name="date" class="site-date" value="13.01.2017"/>
                                         </div>
                                         <div class="item spinner-item">
                                             <label class="label">Ночей</label>
@@ -1093,6 +1094,9 @@
     })
 })(jQuery, document)</script>
 
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+
+
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
 
 <script src="../js/jquery-migrate-1.2.1.min.js+jquery.ba-outside-events.min.js+jquery.maskedinput-1.3.min.js+jquery.mousewheel.js+poshytip,_jquery.poshytip.js.pagespeed.jc.aVspYko1lr.js"></script>
@@ -1111,7 +1115,32 @@
 <!--<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>-->
 <link href="../index_files/forma_style.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" async="" src="../index_files/forma_.js,qv=1.1.2.3.pagespeed.jm.3qVg4zcv4u.js"></script>
-<script type="text/javascript">var nowDate = new Date(2017, 0, 13), isIphone = false;</script>
+
+
+<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />-->
+<!--<script src="http://code.jquery.com/jquery-1.8.3.js"></script>-->
+<!--<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>-->
+
+
+<script type="text/javascript">var nowDate = new Date(), isIphone = false; nowDate.setDate(nowDate.getDate()+1);
+/*var mydate = new Date();
+mydate.setDate(nowDate.getDate()+1);*/
+//var now = new Date();
+//var formated_date = now.format("yyyy-mm-dd");
+//document.getElementById('date').value = formated_date.toString();
+//document.getElementById('date').value = formated_date;
+
+var d = new Date();
+//var formated_date = mydate.format("yyyy-mm-dd");
+
+document.getElementById('date').value = d.getDate()+1 + '.' + d.getMonth()+1 + '.' + d.getFullYear();
+
+window.onload = function () {
+    var str = document.getElementById('date').value;
+    document.getElementById('date').value = str.replace(new RegExp("/",'g'),".");
+}
+</script>
+<!--<script type="text/javascript">var nowDate = new Date(2017, 0, 13), isIphone = false;</script>-->
 
 
 <script type="text/javascript">//<![CDATA[
